@@ -1,0 +1,5 @@
+C:\Development\CEEEPortal\Business\bin\Debug\Business.dll
+C:\Development\CEEEPortal\Business\bin\Debug\Business.pdb
+C:\Development\CEEEPortal\Business\obj\Debug\Business.dll
+C:\Development\CEEEPortal\Business\obj\Debug\Business.pdb
+C:\Development\CEEEPortal\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache

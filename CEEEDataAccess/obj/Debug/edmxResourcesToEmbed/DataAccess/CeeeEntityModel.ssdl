@@ -1,0 +1,1197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProNetTestModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ProNetTestModelStoreContainer">
+    <EntitySet Name="CeeeClientAttribute" EntityType="ProNetTestModel.Store.CeeeClientAttribute" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="CeeeJobContractType" EntityType="ProNetTestModel.Store.CeeeJobContractType" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="CeeeJobDescription" EntityType="ProNetTestModel.Store.CeeeJobDescription" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="CeeeJobType" EntityType="ProNetTestModel.Store.CeeeJobType" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="CeeeOpportunityType" EntityType="ProNetTestModel.Store.CeeeOpportunityType" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="CeeeUser" EntityType="ProNetTestModel.Store.CeeeUser" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="CeeeVolunteeringOneDayChallenge" EntityType="ProNetTestModel.Store.CeeeVolunteeringOneDayChallenge" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="CeeeVolunteeringPlacement" EntityType="ProNetTestModel.Store.CeeeVolunteeringPlacement" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="CeeeVolunteeringType" EntityType="ProNetTestModel.Store.CeeeVolunteeringType" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="webpages_Membership" EntityType="ProNetTestModel.Store.webpages_Membership" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="ProNetTestModel.Store.webpages_OAuthMembership" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="webpages_Roles" EntityType="ProNetTestModel.Store.webpages_Roles" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="ProNetTestModel.Store.webpages_UsersInRoles" store:Type="Tables" Schema="db_datawriter" />
+    <EntitySet Name="ClientContacts" EntityType="ProNetTestModel.Store.ClientContacts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Clients" EntityType="ProNetTestModel.Store.Clients" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumentContent" EntityType="ProNetTestModel.Store.DocumentContent" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Documents" EntityType="ProNetTestModel.Store.Documents" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocumentStatus" EntityType="ProNetTestModel.Store.DocumentStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmploymentTypes" EntityType="ProNetTestModel.Store.EmploymentTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobAttributes" EntityType="ProNetTestModel.Store.JobAttributes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobCategories" EntityType="ProNetTestModel.Store.JobCategories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobDocuments" EntityType="ProNetTestModel.Store.JobDocuments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Jobs" EntityType="ProNetTestModel.Store.Jobs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Locations" EntityType="ProNetTestModel.Store.Locations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Objects" EntityType="ProNetTestModel.Store.Objects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ObjectTypes" EntityType="ProNetTestModel.Store.ObjectTypes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Person" EntityType="ProNetTestModel.Store.Person" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="ProNetTestModel.Store.Users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_CeeeClientAttribute_CeeeUser" Association="ProNetTestModel.Store.FK_CeeeClientAttribute_CeeeUser">
+      <End Role="CeeeUser" EntitySet="CeeeUser" />
+      <End Role="CeeeClientAttribute" EntitySet="CeeeClientAttribute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeClientAttribute_Client" Association="ProNetTestModel.Store.FK_CeeeClientAttribute_Client">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="CeeeClientAttribute" EntitySet="CeeeClientAttribute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeJobDescription_CeeeJobContractType" Association="ProNetTestModel.Store.FK_CeeeJobDescription_CeeeJobContractType">
+      <End Role="CeeeJobContractType" EntitySet="CeeeJobContractType" />
+      <End Role="CeeeJobDescription" EntitySet="CeeeJobDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeJobDescription_CeeeJOneDayChallenge" Association="ProNetTestModel.Store.FK_CeeeJobDescription_CeeeJOneDayChallenge">
+      <End Role="CeeeVolunteeringOneDayChallenge" EntitySet="CeeeVolunteeringOneDayChallenge" />
+      <End Role="CeeeJobDescription" EntitySet="CeeeJobDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeJobDescription_Job" Association="ProNetTestModel.Store.FK_CeeeJobDescription_Job">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="CeeeJobDescription" EntitySet="CeeeJobDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeJobDescription_JobType" Association="ProNetTestModel.Store.FK_CeeeJobDescription_JobType">
+      <End Role="CeeeJobType" EntitySet="CeeeJobType" />
+      <End Role="CeeeJobDescription" EntitySet="CeeeJobDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeJobDescription_VolunteeringPlacement" Association="ProNetTestModel.Store.FK_CeeeJobDescription_VolunteeringPlacement">
+      <End Role="CeeeVolunteeringPlacement" EntitySet="CeeeVolunteeringPlacement" />
+      <End Role="CeeeJobDescription" EntitySet="CeeeJobDescription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeOpportunityType_CeeeUser" Association="ProNetTestModel.Store.FK_CeeeOpportunityType_CeeeUser">
+      <End Role="CeeeUser" EntitySet="CeeeUser" />
+      <End Role="CeeeOpportunityType" EntitySet="CeeeOpportunityType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeUser_Clients" Association="ProNetTestModel.Store.FK_CeeeUser_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="CeeeUser" EntitySet="CeeeUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeVolunteeringOneDayChallenge_CeeeVolunteeringType" Association="ProNetTestModel.Store.FK_CeeeVolunteeringOneDayChallenge_CeeeVolunteeringType">
+      <End Role="CeeeVolunteeringType" EntitySet="CeeeVolunteeringType" />
+      <End Role="CeeeVolunteeringOneDayChallenge" EntitySet="CeeeVolunteeringOneDayChallenge" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeVolunteeringPlacement_CeeeVolunteeringType" Association="ProNetTestModel.Store.FK_CeeeVolunteeringPlacement_CeeeVolunteeringType">
+      <End Role="CeeeVolunteeringType" EntitySet="CeeeVolunteeringType" />
+      <End Role="CeeeVolunteeringPlacement" EntitySet="CeeeVolunteeringPlacement" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_Clients" Association="ProNetTestModel.Store.FK_ClientContacts_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="ClientContacts" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_EmploymentTypes" Association="ProNetTestModel.Store.FK_ClientContacts_EmploymentTypes">
+      <End Role="EmploymentTypes" EntitySet="EmploymentTypes" />
+      <End Role="ClientContacts" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_Person" Association="ProNetTestModel.Store.FK_ClientContacts_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="ClientContacts" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_Person1" Association="ProNetTestModel.Store.FK_ClientContacts_Person1">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="ClientContacts" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_Users" Association="ProNetTestModel.Store.FK_ClientContacts_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ClientContacts" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_Users1" Association="ProNetTestModel.Store.FK_ClientContacts_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="ClientContacts" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_ClientContacts" Association="ProNetTestModel.Store.FK_Clients_ClientContacts">
+      <End Role="ClientContacts" EntitySet="ClientContacts" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_Locations" Association="ProNetTestModel.Store.FK_Clients_Locations">
+      <End Role="Locations" EntitySet="Locations" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_Objects" Association="ProNetTestModel.Store.FK_Clients_Objects">
+      <End Role="Objects" EntitySet="Objects" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_Users" Association="ProNetTestModel.Store.FK_Clients_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_Users1" Association="ProNetTestModel.Store.FK_Clients_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Clients" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentContent_Documents" Association="ProNetTestModel.Store.FK_DocumentContent_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="DocumentContent" EntitySet="DocumentContent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_DocumentStatus" Association="ProNetTestModel.Store.FK_Documents_DocumentStatus">
+      <End Role="DocumentStatus" EntitySet="DocumentStatus" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Users" Association="ProNetTestModel.Store.FK_Documents_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Users1" Association="ProNetTestModel.Store.FK_Documents_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobAttributes_Jobs" Association="ProNetTestModel.Store.FK_JobAttributes_Jobs">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="JobAttributes" EntitySet="JobAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobContractType_JobDescription" Association="ProNetTestModel.Store.FK_JobContractType_JobDescription">
+      <End Role="CeeeJobContractType" EntitySet="CeeeJobContractType" />
+      <End Role="CeeeJobContractType1" EntitySet="CeeeJobContractType" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobDocuments_Documents" Association="ProNetTestModel.Store.FK_JobDocuments_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="JobDocuments" EntitySet="JobDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobDocuments_Jobs" Association="ProNetTestModel.Store.FK_JobDocuments_Jobs">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="JobDocuments" EntitySet="JobDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobs_ClientHirerLegalEntity" Association="ProNetTestModel.Store.FK_Jobs_ClientHirerLegalEntity">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobs_Clients" Association="ProNetTestModel.Store.FK_Jobs_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Objects_Locations" Association="ProNetTestModel.Store.FK_Objects_Locations">
+      <End Role="Locations" EntitySet="Locations" />
+      <End Role="Objects" EntitySet="Objects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Objects_ObjectTypes" Association="ProNetTestModel.Store.FK_Objects_ObjectTypes">
+      <End Role="ObjectTypes" EntitySet="ObjectTypes" />
+      <End Role="Objects" EntitySet="Objects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Objects_Users" Association="ProNetTestModel.Store.FK_Objects_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Objects" EntitySet="Objects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Objects" Association="ProNetTestModel.Store.FK_Person_Objects">
+      <End Role="Objects" EntitySet="Objects" />
+      <End Role="Person" EntitySet="Person" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Users" Association="ProNetTestModel.Store.FK_Person_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Person" EntitySet="Person" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Users1" Association="ProNetTestModel.Store.FK_Person_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Person" EntitySet="Person" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RoleId" Association="ProNetTestModel.Store.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserId" Association="ProNetTestModel.Store.fk_UserId">
+      <End Role="CeeeUser" EntitySet="CeeeUser" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users" Association="ProNetTestModel.Store.FK_Users_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users1" Association="ProNetTestModel.Store.FK_Users_Users1">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users2" Association="ProNetTestModel.Store.FK_Users_Users2">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Users1" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CeeeClientAttribute">
+    <Key>
+      <PropertyRef Name="ClientAttributeID" />
+    </Key>
+    <Property Name="ClientAttributeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="UserID" Type="int" />
+    <Property Name="LandlineNumber" Type="varchar" MaxLength="50" />
+    <Property Name="MobileNumber" Type="varchar" MaxLength="50" />
+    <Property Name="OrganisationWebsite" Type="varchar" MaxLength="200" />
+    <Property Name="CompanySize" Type="varchar" MaxLength="20" />
+    <Property Name="HowHeard" Type="varchar" MaxLength="100" />
+    <Property Name="Title" Type="varchar" MaxLength="10" />
+    <Property Name="JobTitle" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="CeeeJobContractType">
+    <Key>
+      <PropertyRef Name="JobContractTypeId" />
+    </Key>
+    <Property Name="JobContractTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CeeeJobDescription">
+    <Key>
+      <PropertyRef Name="JobDescriptionID" />
+    </Key>
+    <Property Name="JobDescriptionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="JobTypeID" Type="int" />
+    <Property Name="JobCategoryID" Type="int" />
+    <Property Name="ClosingDate" Type="datetime" />
+    <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="SalaryPeriod" Type="varchar" MaxLength="100" />
+    <Property Name="HowEmployeeApproaches" Type="varchar" MaxLength="100" />
+    <Property Name="ContractTypeID" Type="int" />
+    <Property Name="JobID" Type="int" />
+    <Property Name="NoOfHoursPerWeek" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="IsVolunteering" Type="bit" />
+    <Property Name="VolunteeringTypeID" Type="int" />
+    <Property Name="JobDescription" Type="varchar" MaxLength="2000" />
+    <Property Name="OneDayVolunteeringID" Type="int" />
+    <Property Name="VolunteeringPlacmentID" Type="int" />
+    <Property Name="JobContractTypeID" Type="int" />
+    <Property Name="EndDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CeeeJobType">
+    <Key>
+      <PropertyRef Name="JobTypeID" />
+    </Key>
+    <Property Name="JobTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="JobType" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CeeeOpportunityType">
+    <Key>
+      <PropertyRef Name="OpportunityType" />
+    </Key>
+    <Property Name="OpportunityType" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OpportunityName" Type="varchar" MaxLength="400" />
+    <Property Name="UserID" Type="int" />
+  </EntityType>
+  <EntityType Name="CeeeUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="200" />
+    <Property Name="ClientID" Type="int" />
+    <Property Name="Phone" Type="varchar" MaxLength="20" />
+    <Property Name="JobTitle" Type="varchar" MaxLength="100" />
+    <Property Name="OrgWebsite" Type="varchar" MaxLength="300" />
+    <Property Name="CompanySize" Type="varchar" MaxLength="300" />
+    <Property Name="HowHeard" Type="varchar" MaxLength="300" />
+    <Property Name="Title" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CeeeVolunteeringOneDayChallenge">
+    <Key>
+      <PropertyRef Name="VolunteeringJobId" />
+    </Key>
+    <Property Name="VolunteeringJobId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProjectEventTitle" Type="varchar" MaxLength="200" />
+    <Property Name="Location" Type="varchar" MaxLength="200" />
+    <Property Name="When" Type="varchar" MaxLength="50" />
+    <Property Name="MeetingTime" Type="varchar" MaxLength="50" />
+    <Property Name="FinishingTime" Type="varchar" MaxLength="50" />
+    <Property Name="MeetingPoint" Type="varchar" MaxLength="200" />
+    <Property Name="WhatWillBeDoing" Type="varchar" MaxLength="1000" />
+    <Property Name="ExperienceNeeded" Type="varchar" MaxLength="2000" />
+    <Property Name="IsCordinatedByUniversity" Type="bit" />
+    <Property Name="RiskAssesmentFile" Type="binary" MaxLength="1000" />
+    <Property Name="SessionPlanFile" Type="binary" MaxLength="1000" />
+    <Property Name="BudgetPlanFile" Type="binary" MaxLength="1000" />
+    <Property Name="HasInsuranceLiability" Type="bit" />
+    <Property Name="HasCarriedOutRiskAssesment" Type="bit" />
+    <Property Name="VolunteeringTypeId" Type="int" />
+    <Property Name="OpportunityTypes" Type="varchar(max)" />
+    <Property Name="ContactName" Type="varchar" MaxLength="50" />
+    <Property Name="ContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="AlternateEmail" Type="varchar" MaxLength="100" />
+    <Property Name="OrganisationType" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="CeeeVolunteeringPlacement">
+    <Key>
+      <PropertyRef Name="VolunteeringJobID" />
+    </Key>
+    <Property Name="VolunteeringJobID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleTitle" Type="varchar" MaxLength="100" />
+    <Property Name="Location" Type="varchar" MaxLength="100" />
+    <Property Name="DayTimeRequired" Type="varchar" MaxLength="100" />
+    <Property Name="DurationNeeded" Type="varchar" MaxLength="100" />
+    <Property Name="SkillsRequired" Type="varchar" MaxLength="500" />
+    <Property Name="TrainingDetails" Type="varchar" MaxLength="500" />
+    <Property Name="ApplicationMethod" Type="varchar" MaxLength="300" />
+    <Property Name="ApplicationForm" Type="varbinary" MaxLength="1000" />
+    <Property Name="HowToPostApplication" Type="varchar" MaxLength="100" />
+    <Property Name="RoleDescriptionFile" Type="varbinary" MaxLength="1000" />
+    <Property Name="HasLiabilityInsurance" Type="bit" />
+    <Property Name="HasCarriedOutRiskAssesment" Type="bit" />
+    <Property Name="NumberOfPositions" Type="int" />
+    <Property Name="VolunteeringTypeID" Type="int" />
+    <Property Name="OpportunityTypes" Type="varchar(max)" />
+    <Property Name="ContactName" Type="varchar" MaxLength="50" />
+    <Property Name="ContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="AlternateEmail" Type="varchar" MaxLength="100" />
+    <Property Name="OrganisationType" Type="varchar" MaxLength="100" />
+    <Property Name="AboutOrganisation" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="CeeeVolunteeringType">
+    <Key>
+      <PropertyRef Name="VolunteeringTypeID" />
+    </Key>
+    <Property Name="VolunteeringTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="200" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClientContacts">
+    <Key>
+      <PropertyRef Name="ClientContactId" />
+    </Key>
+    <Property Name="ClientContactId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="ContactPersonId" Type="int" Nullable="false" />
+    <Property Name="ContactTypeId" Type="int" Nullable="false" />
+    <Property Name="JobTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="PositionValueId" Type="int" />
+    <Property Name="Department" Type="nvarchar" MaxLength="255" />
+    <Property Name="PriorityValueId" Type="int" />
+    <Property Name="PrimaryEmailAddressPhoneId" Type="int" />
+    <Property Name="EmploymentStartDate" Type="datetime" />
+    <Property Name="EmploymentEndDate" Type="datetime" />
+    <Property Name="EmploymentTypeId" Type="int" />
+    <Property Name="PlacementId" Type="int" />
+    <Property Name="ReportsToPersonId" Type="int" />
+    <Property Name="CanvassPeriodValueId" Type="int" />
+    <Property Name="HasLeft" Type="nvarchar" MaxLength="1" />
+    <Property Name="LeavingDate" Type="datetime" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="int" Nullable="false" />
+    <Property Name="Company" Type="nvarchar" Nullable="false" MaxLength="75" />
+    <Property Name="OurReference" Type="nvarchar" MaxLength="25" />
+    <Property Name="Notes" Type="ntext" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="SourceId" Type="int" />
+    <Property Name="LocationId" Type="int" />
+    <Property Name="DefaultTermPerc" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="PrimaryEmailAddressPhoneId" Type="int" />
+    <Property Name="CanvassPeriodValueId" Type="int" />
+    <Property Name="InvoiceContactId" Type="int" />
+    <Property Name="InvoiceAddressId" Type="int" />
+    <Property Name="VatNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="RegNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreditLimit" Type="int" />
+    <Property Name="CreditReviewDate" Type="datetime" />
+    <Property Name="NoVAT" Type="bit" />
+    <Property Name="CreditCheck" Type="bit" />
+    <Property Name="CreditStop" Type="bit" />
+    <Property Name="CreditNotes" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="DocumentContent">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+    </Key>
+    <Property Name="DocumentId" Type="int" Nullable="false" />
+    <Property Name="Document" Type="varbinary(max)" />
+    <Property Name="FileExtension" Type="nvarchar" MaxLength="10" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="IsStoredExternally" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="NotebookItemId" Type="int" />
+    <Property Name="TemplateID" Type="int" />
+    <Property Name="Publishable" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="Incoming" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="DocumentStatusId" Type="int" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="ExternalEditorOnly" Type="nvarchar" MaxLength="1" />
+    <Property Name="Protected" Type="bit" Nullable="false" />
+    <Property Name="SourceDoc" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="DocumentStatus">
+    <Key>
+      <PropertyRef Name="DocumentStatusID" />
+    </Key>
+    <Property Name="DocumentStatusID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SystemCode" Type="nvarchar" MaxLength="25" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="StatusIcon" Type="image" />
+  </EntityType>
+  <EntityType Name="EmploymentTypes">
+    <Key>
+      <PropertyRef Name="EmploymentTypeId" />
+    </Key>
+    <Property Name="EmploymentTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SystemCode" Type="nvarchar" MaxLength="25" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="JobAttributes">
+    <Key>
+      <PropertyRef Name="JobAttributeId" />
+    </Key>
+    <Property Name="JobAttributeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="JobId" Type="int" Nullable="false" />
+    <Property Name="AttributeId" Type="int" Nullable="false" />
+    <Property Name="Grade" Type="int" />
+    <Property Name="Set" Type="int" />
+    <Property Name="EffectiveDate" Type="datetime" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="Notes" Type="ntext" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="JobCategories">
+    <Key>
+      <PropertyRef Name="JobCategoryId" />
+    </Key>
+    <Property Name="JobCategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SystemCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedTimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="JobDocuments">
+    <Key>
+      <PropertyRef Name="JobDocumentId" />
+    </Key>
+    <Property Name="JobDocumentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="JobId" Type="int" Nullable="false" />
+    <Property Name="Sequence" Type="int" />
+    <Property Name="JobDocDefinitionId" Type="int" />
+    <Property Name="DocumentId" Type="int" />
+    <Property Name="Completed" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Jobs">
+    <Key>
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="JobId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="SectorId" Type="int" Nullable="false" />
+    <Property Name="JobRefNo" Type="nvarchar" Nullable="false" MaxLength="10" />
+    <Property Name="ClientContactId" Type="int" />
+    <Property Name="PositionAttributeId" Type="int" />
+    <Property Name="PosCode" Type="nvarchar" MaxLength="15" />
+    <Property Name="LocationId" Type="int" />
+    <Property Name="JobTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="AreaAttributeId" Type="int" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EmploymentTypeId" Type="int" />
+    <Property Name="MinBasic" Type="numeric" Precision="19" Scale="7" />
+    <Property Name="MaxBasic" Type="numeric" Precision="19" Scale="7" />
+    <Property Name="MinPackage" Type="numeric" Precision="19" Scale="7" />
+    <Property Name="MaxPackage" Type="numeric" Precision="19" Scale="7" />
+    <Property Name="MinAge" Type="int" />
+    <Property Name="MaxAge" Type="int" />
+    <Property Name="StatusId" Type="int" />
+    <Property Name="StatusDate" Type="datetime" />
+    <Property Name="Notes" Type="ntext" />
+    <Property Name="InterviewAddress" Type="ntext" />
+    <Property Name="AppIntInfo" Type="ntext" />
+    <Property Name="HoursPerWeek" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="CurrencyId" Type="int" />
+    <Property Name="Published" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="PublishedJobCategoryId" Type="int" />
+    <Property Name="PublishedJobDescription" Type="ntext" />
+    <Property Name="Archived" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="CVKeyWord" Type="nvarchar" MaxLength="255" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="WorkAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="PurchaseOrderNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="NoOfPlaces" Type="int" />
+    <Property Name="InvoiceContactId" Type="int" />
+    <Property Name="CommissionPerc" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="PlacementFee" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="Salary" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="Tier2ReleaseHold" Type="bit" />
+    <Property Name="Retainer" Type="bit" />
+    <Property Name="TotalRetainerFee" Type="numeric" Precision="9" Scale="2" />
+    <Property Name="ClientHirerLegalEntityId" Type="int" />
+    <Property Name="JobTemplateId" Type="int" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Name="LocationId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="X" Type="int" />
+    <Property Name="Y" Type="int" />
+    <Property Name="Latitude" Type="decimal" Precision="10" Scale="6" />
+    <Property Name="Longitude" Type="decimal" Precision="10" Scale="6" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Objects">
+    <Key>
+      <PropertyRef Name="ObjectID" />
+    </Key>
+    <Property Name="ObjectID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ObjectTypeId" Type="int" Nullable="false" />
+    <Property Name="FileAs" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="FlagText" Type="nvarchar" MaxLength="50" />
+    <Property Name="LocationId" Type="int" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="SourceId" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ObjectTypes">
+    <Key>
+      <PropertyRef Name="ObjectTypeId" />
+    </Key>
+    <Property Name="ObjectTypeId" Type="int" Nullable="false" />
+    <Property Name="SystemCode" Type="nvarchar" MaxLength="25" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Name="PersonID" Type="int" Nullable="false" />
+    <Property Name="PersonName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="100" />
+    <Property Name="TitleValueId" Type="int" />
+    <Property Name="Salutation" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dob" Type="datetime" />
+    <Property Name="GenderValueId" Type="int" />
+    <Property Name="MaritalStatusValueId" Type="int" />
+    <Property Name="NationalityId" Type="int" />
+    <Property Name="Notes" Type="ntext" />
+    <Property Name="Photograph" Type="image" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedOn" Type="datetime" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LoginName" Type="nvarchar" Nullable="false" MaxLength="20" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="255" />
+    <Property Name="Inactive" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="SecurityOption" Type="nvarchar" Nullable="false" MaxLength="1" />
+    <Property Name="Photograph" Type="image" />
+    <Property Name="CreatedUserId" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedUserId" Type="int" />
+    <Property Name="UpdatedTimestamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="ReportsToUserId" Type="int" />
+    <Property Name="UseWindowsSecurity" Type="bit" />
+    <Property Name="Domain" Type="nvarchar" MaxLength="255" />
+    <Property Name="HideLoginDialog" Type="bit" />
+    <Property Name="Sid" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK_CeeeClientAttribute_CeeeUser">
+    <End Role="CeeeUser" Type="ProNetTestModel.Store.CeeeUser" Multiplicity="1" />
+    <End Role="CeeeClientAttribute" Type="ProNetTestModel.Store.CeeeClientAttribute" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="CeeeClientAttribute">
+        <PropertyRef Name="ClientAttributeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeClientAttribute_Client">
+    <End Role="Clients" Type="ProNetTestModel.Store.Clients" Multiplicity="1" />
+    <End Role="CeeeClientAttribute" Type="ProNetTestModel.Store.CeeeClientAttribute" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="CeeeClientAttribute">
+        <PropertyRef Name="ClientAttributeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeJobDescription_CeeeJobContractType">
+    <End Role="CeeeJobContractType" Type="ProNetTestModel.Store.CeeeJobContractType" Multiplicity="0..1" />
+    <End Role="CeeeJobDescription" Type="ProNetTestModel.Store.CeeeJobDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeJobContractType">
+        <PropertyRef Name="JobContractTypeId" />
+      </Principal>
+      <Dependent Role="CeeeJobDescription">
+        <PropertyRef Name="JobContractTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeJobDescription_CeeeJOneDayChallenge">
+    <End Role="CeeeVolunteeringOneDayChallenge" Type="ProNetTestModel.Store.CeeeVolunteeringOneDayChallenge" Multiplicity="0..1" />
+    <End Role="CeeeJobDescription" Type="ProNetTestModel.Store.CeeeJobDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeVolunteeringOneDayChallenge">
+        <PropertyRef Name="VolunteeringJobId" />
+      </Principal>
+      <Dependent Role="CeeeJobDescription">
+        <PropertyRef Name="OneDayVolunteeringID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeJobDescription_Job">
+    <End Role="Jobs" Type="ProNetTestModel.Store.Jobs" Multiplicity="0..1" />
+    <End Role="CeeeJobDescription" Type="ProNetTestModel.Store.CeeeJobDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="CeeeJobDescription">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeJobDescription_JobType">
+    <End Role="CeeeJobType" Type="ProNetTestModel.Store.CeeeJobType" Multiplicity="0..1" />
+    <End Role="CeeeJobDescription" Type="ProNetTestModel.Store.CeeeJobDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeJobType">
+        <PropertyRef Name="JobTypeID" />
+      </Principal>
+      <Dependent Role="CeeeJobDescription">
+        <PropertyRef Name="JobTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeJobDescription_VolunteeringPlacement">
+    <End Role="CeeeVolunteeringPlacement" Type="ProNetTestModel.Store.CeeeVolunteeringPlacement" Multiplicity="0..1" />
+    <End Role="CeeeJobDescription" Type="ProNetTestModel.Store.CeeeJobDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeVolunteeringPlacement">
+        <PropertyRef Name="VolunteeringJobID" />
+      </Principal>
+      <Dependent Role="CeeeJobDescription">
+        <PropertyRef Name="VolunteeringPlacmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeOpportunityType_CeeeUser">
+    <End Role="CeeeUser" Type="ProNetTestModel.Store.CeeeUser" Multiplicity="0..1" />
+    <End Role="CeeeOpportunityType" Type="ProNetTestModel.Store.CeeeOpportunityType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="CeeeOpportunityType">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeUser_Clients">
+    <End Role="Clients" Type="ProNetTestModel.Store.Clients" Multiplicity="0..1" />
+    <End Role="CeeeUser" Type="ProNetTestModel.Store.CeeeUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="CeeeUser">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeVolunteeringOneDayChallenge_CeeeVolunteeringType">
+    <End Role="CeeeVolunteeringType" Type="ProNetTestModel.Store.CeeeVolunteeringType" Multiplicity="0..1" />
+    <End Role="CeeeVolunteeringOneDayChallenge" Type="ProNetTestModel.Store.CeeeVolunteeringOneDayChallenge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeVolunteeringType">
+        <PropertyRef Name="VolunteeringTypeID" />
+      </Principal>
+      <Dependent Role="CeeeVolunteeringOneDayChallenge">
+        <PropertyRef Name="VolunteeringTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeVolunteeringPlacement_CeeeVolunteeringType">
+    <End Role="CeeeVolunteeringType" Type="ProNetTestModel.Store.CeeeVolunteeringType" Multiplicity="0..1" />
+    <End Role="CeeeVolunteeringPlacement" Type="ProNetTestModel.Store.CeeeVolunteeringPlacement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeVolunteeringType">
+        <PropertyRef Name="VolunteeringTypeID" />
+      </Principal>
+      <Dependent Role="CeeeVolunteeringPlacement">
+        <PropertyRef Name="VolunteeringTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_Clients">
+    <End Role="Clients" Type="ProNetTestModel.Store.Clients" Multiplicity="1" />
+    <End Role="ClientContacts" Type="ProNetTestModel.Store.ClientContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="ClientContacts">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_EmploymentTypes">
+    <End Role="EmploymentTypes" Type="ProNetTestModel.Store.EmploymentTypes" Multiplicity="0..1" />
+    <End Role="ClientContacts" Type="ProNetTestModel.Store.ClientContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmploymentTypes">
+        <PropertyRef Name="EmploymentTypeId" />
+      </Principal>
+      <Dependent Role="ClientContacts">
+        <PropertyRef Name="EmploymentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_Person">
+    <End Role="Person" Type="ProNetTestModel.Store.Person" Multiplicity="1" />
+    <End Role="ClientContacts" Type="ProNetTestModel.Store.ClientContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="ClientContacts">
+        <PropertyRef Name="ContactPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_Person1">
+    <End Role="Person" Type="ProNetTestModel.Store.Person" Multiplicity="0..1" />
+    <End Role="ClientContacts" Type="ProNetTestModel.Store.ClientContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="ClientContacts">
+        <PropertyRef Name="ReportsToPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_Users">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="1" />
+    <End Role="ClientContacts" Type="ProNetTestModel.Store.ClientContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ClientContacts">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_Users1">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="0..1" />
+    <End Role="ClientContacts" Type="ProNetTestModel.Store.ClientContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ClientContacts">
+        <PropertyRef Name="UpdatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_ClientContacts">
+    <End Role="ClientContacts" Type="ProNetTestModel.Store.ClientContacts" Multiplicity="0..1" />
+    <End Role="Clients" Type="ProNetTestModel.Store.Clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientContacts">
+        <PropertyRef Name="ClientContactId" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="InvoiceContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_Locations">
+    <End Role="Locations" Type="ProNetTestModel.Store.Locations" Multiplicity="0..1" />
+    <End Role="Clients" Type="ProNetTestModel.Store.Clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations">
+        <PropertyRef Name="LocationId" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_Objects">
+    <End Role="Objects" Type="ProNetTestModel.Store.Objects" Multiplicity="1" />
+    <End Role="Clients" Type="ProNetTestModel.Store.Clients" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Objects">
+        <PropertyRef Name="ObjectID" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_Users">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="1" />
+    <End Role="Clients" Type="ProNetTestModel.Store.Clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_Users1">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Clients" Type="ProNetTestModel.Store.Clients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Clients">
+        <PropertyRef Name="UpdatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentContent_Documents">
+    <End Role="Documents" Type="ProNetTestModel.Store.Documents" Multiplicity="1" />
+    <End Role="DocumentContent" Type="ProNetTestModel.Store.DocumentContent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="DocumentID" />
+      </Principal>
+      <Dependent Role="DocumentContent">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_DocumentStatus">
+    <End Role="DocumentStatus" Type="ProNetTestModel.Store.DocumentStatus" Multiplicity="0..1" />
+    <End Role="Documents" Type="ProNetTestModel.Store.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentStatus">
+        <PropertyRef Name="DocumentStatusID" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="DocumentStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Users">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="1" />
+    <End Role="Documents" Type="ProNetTestModel.Store.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Users1">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Documents" Type="ProNetTestModel.Store.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="UpdatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobAttributes_Jobs">
+    <End Role="Jobs" Type="ProNetTestModel.Store.Jobs" Multiplicity="1" />
+    <End Role="JobAttributes" Type="ProNetTestModel.Store.JobAttributes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="JobAttributes">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobContractType_JobDescription">
+    <End Role="CeeeJobContractType" Type="ProNetTestModel.Store.CeeeJobContractType" Multiplicity="1" />
+    <End Role="CeeeJobContractType1" Type="ProNetTestModel.Store.CeeeJobContractType" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeJobContractType">
+        <PropertyRef Name="JobContractTypeId" />
+      </Principal>
+      <Dependent Role="CeeeJobContractType1">
+        <PropertyRef Name="JobContractTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobDocuments_Documents">
+    <End Role="Documents" Type="ProNetTestModel.Store.Documents" Multiplicity="0..1" />
+    <End Role="JobDocuments" Type="ProNetTestModel.Store.JobDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="DocumentID" />
+      </Principal>
+      <Dependent Role="JobDocuments">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobDocuments_Jobs">
+    <End Role="Jobs" Type="ProNetTestModel.Store.Jobs" Multiplicity="1" />
+    <End Role="JobDocuments" Type="ProNetTestModel.Store.JobDocuments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="JobDocuments">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobs_ClientHirerLegalEntity">
+    <End Role="Clients" Type="ProNetTestModel.Store.Clients" Multiplicity="0..1" />
+    <End Role="Jobs" Type="ProNetTestModel.Store.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="ClientHirerLegalEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobs_Clients">
+    <End Role="Clients" Type="ProNetTestModel.Store.Clients" Multiplicity="1" />
+    <End Role="Jobs" Type="ProNetTestModel.Store.Jobs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Objects_Locations">
+    <End Role="Locations" Type="ProNetTestModel.Store.Locations" Multiplicity="0..1" />
+    <End Role="Objects" Type="ProNetTestModel.Store.Objects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Locations">
+        <PropertyRef Name="LocationId" />
+      </Principal>
+      <Dependent Role="Objects">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Objects_ObjectTypes">
+    <End Role="ObjectTypes" Type="ProNetTestModel.Store.ObjectTypes" Multiplicity="1" />
+    <End Role="Objects" Type="ProNetTestModel.Store.Objects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObjectTypes">
+        <PropertyRef Name="ObjectTypeId" />
+      </Principal>
+      <Dependent Role="Objects">
+        <PropertyRef Name="ObjectTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Objects_Users">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="1" />
+    <End Role="Objects" Type="ProNetTestModel.Store.Objects" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Objects">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Objects">
+    <End Role="Objects" Type="ProNetTestModel.Store.Objects" Multiplicity="1" />
+    <End Role="Person" Type="ProNetTestModel.Store.Person" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Objects">
+        <PropertyRef Name="ObjectID" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Users">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="1" />
+    <End Role="Person" Type="ProNetTestModel.Store.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Users1">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Person" Type="ProNetTestModel.Store.Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="UpdatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="ProNetTestModel.Store.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="ProNetTestModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserId">
+    <End Role="CeeeUser" Type="ProNetTestModel.Store.CeeeUser" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="ProNetTestModel.Store.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="1" />
+    <End Role="Users1" Type="ProNetTestModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users1">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Users1" Type="ProNetTestModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="UpdatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users2">
+    <End Role="Users" Type="ProNetTestModel.Store.Users" Multiplicity="0..1" />
+    <End Role="Users1" Type="ProNetTestModel.Store.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Users1">
+        <PropertyRef Name="ReportsToUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

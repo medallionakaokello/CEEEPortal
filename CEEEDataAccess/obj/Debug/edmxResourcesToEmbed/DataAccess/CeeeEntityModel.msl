@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ProNetTestModelStoreContainer" CdmEntityContainer="ProNetTestEntities">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="ProNetTestModel.Client">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="OurReference" ColumnName="OurReference" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="DefaultTermPerc" ColumnName="DefaultTermPerc" />
+          <ScalarProperty Name="PrimaryEmailAddressPhoneId" ColumnName="PrimaryEmailAddressPhoneId" />
+          <ScalarProperty Name="CanvassPeriodValueId" ColumnName="CanvassPeriodValueId" />
+          <ScalarProperty Name="InvoiceContactId" ColumnName="InvoiceContactId" />
+          <ScalarProperty Name="InvoiceAddressId" ColumnName="InvoiceAddressId" />
+          <ScalarProperty Name="VatNo" ColumnName="VatNo" />
+          <ScalarProperty Name="RegNo" ColumnName="RegNo" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="CreditLimit" ColumnName="CreditLimit" />
+          <ScalarProperty Name="CreditReviewDate" ColumnName="CreditReviewDate" />
+          <ScalarProperty Name="NoVAT" ColumnName="NoVAT" />
+          <ScalarProperty Name="CreditCheck" ColumnName="CreditCheck" />
+          <ScalarProperty Name="CreditStop" ColumnName="CreditStop" />
+          <ScalarProperty Name="CreditNotes" ColumnName="CreditNotes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentContents">
+      <EntityTypeMapping TypeName="ProNetTestModel.DocumentContent">
+        <MappingFragment StoreEntitySet="DocumentContent">
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="Document" ColumnName="Document" />
+          <ScalarProperty Name="FileExtension" ColumnName="FileExtension" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="IsStoredExternally" ColumnName="IsStoredExternally" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="ProNetTestModel.Document">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NotebookItemId" ColumnName="NotebookItemId" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="Publishable" ColumnName="Publishable" />
+          <ScalarProperty Name="Incoming" ColumnName="Incoming" />
+          <ScalarProperty Name="DocumentStatusId" ColumnName="DocumentStatusId" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="ExternalEditorOnly" ColumnName="ExternalEditorOnly" />
+          <ScalarProperty Name="Protected" ColumnName="Protected" />
+          <ScalarProperty Name="SourceDoc" ColumnName="SourceDoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentStatus">
+      <EntityTypeMapping TypeName="ProNetTestModel.DocumentStatu">
+        <MappingFragment StoreEntitySet="DocumentStatus">
+          <ScalarProperty Name="DocumentStatusID" ColumnName="DocumentStatusID" />
+          <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="StatusIcon" ColumnName="StatusIcon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmploymentTypes">
+      <EntityTypeMapping TypeName="ProNetTestModel.EmploymentType">
+        <MappingFragment StoreEntitySet="EmploymentTypes">
+          <ScalarProperty Name="EmploymentTypeId" ColumnName="EmploymentTypeId" />
+          <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobAttributes">
+      <EntityTypeMapping TypeName="ProNetTestModel.JobAttribute">
+        <MappingFragment StoreEntitySet="JobAttributes">
+          <ScalarProperty Name="JobAttributeId" ColumnName="JobAttributeId" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="AttributeId" ColumnName="AttributeId" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Set" ColumnName="Set" />
+          <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobCategories">
+      <EntityTypeMapping TypeName="ProNetTestModel.JobCategory">
+        <MappingFragment StoreEntitySet="JobCategories">
+          <ScalarProperty Name="JobCategoryId" ColumnName="JobCategoryId" />
+          <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="UpdatedTimeStamp" ColumnName="UpdatedTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobDocuments">
+      <EntityTypeMapping TypeName="ProNetTestModel.JobDocument">
+        <MappingFragment StoreEntitySet="JobDocuments">
+          <ScalarProperty Name="JobDocumentId" ColumnName="JobDocumentId" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="JobDocDefinitionId" ColumnName="JobDocDefinitionId" />
+          <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+          <ScalarProperty Name="Completed" ColumnName="Completed" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="ProNetTestModel.Job">
+        <MappingFragment StoreEntitySet="Jobs">
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="SectorId" ColumnName="SectorId" />
+          <ScalarProperty Name="JobRefNo" ColumnName="JobRefNo" />
+          <ScalarProperty Name="ClientContactId" ColumnName="ClientContactId" />
+          <ScalarProperty Name="PositionAttributeId" ColumnName="PositionAttributeId" />
+          <ScalarProperty Name="PosCode" ColumnName="PosCode" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="AreaAttributeId" ColumnName="AreaAttributeId" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EmploymentTypeId" ColumnName="EmploymentTypeId" />
+          <ScalarProperty Name="MinBasic" ColumnName="MinBasic" />
+          <ScalarProperty Name="MaxBasic" ColumnName="MaxBasic" />
+          <ScalarProperty Name="MinPackage" ColumnName="MinPackage" />
+          <ScalarProperty Name="MaxPackage" ColumnName="MaxPackage" />
+          <ScalarProperty Name="MinAge" ColumnName="MinAge" />
+          <ScalarProperty Name="MaxAge" ColumnName="MaxAge" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+          <ScalarProperty Name="StatusDate" ColumnName="StatusDate" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="InterviewAddress" ColumnName="InterviewAddress" />
+          <ScalarProperty Name="AppIntInfo" ColumnName="AppIntInfo" />
+          <ScalarProperty Name="HoursPerWeek" ColumnName="HoursPerWeek" />
+          <ScalarProperty Name="CurrencyId" ColumnName="CurrencyId" />
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="PublishedJobCategoryId" ColumnName="PublishedJobCategoryId" />
+          <ScalarProperty Name="PublishedJobDescription" ColumnName="PublishedJobDescription" />
+          <ScalarProperty Name="Archived" ColumnName="Archived" />
+          <ScalarProperty Name="CVKeyWord" ColumnName="CVKeyWord" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="WorkAddress" ColumnName="WorkAddress" />
+          <ScalarProperty Name="PurchaseOrderNo" ColumnName="PurchaseOrderNo" />
+          <ScalarProperty Name="NoOfPlaces" ColumnName="NoOfPlaces" />
+          <ScalarProperty Name="InvoiceContactId" ColumnName="InvoiceContactId" />
+          <ScalarProperty Name="CommissionPerc" ColumnName="CommissionPerc" />
+          <ScalarProperty Name="PlacementFee" ColumnName="PlacementFee" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Tier2ReleaseHold" ColumnName="Tier2ReleaseHold" />
+          <ScalarProperty Name="Retainer" ColumnName="Retainer" />
+          <ScalarProperty Name="TotalRetainerFee" ColumnName="TotalRetainerFee" />
+          <ScalarProperty Name="ClientHirerLegalEntityId" ColumnName="ClientHirerLegalEntityId" />
+          <ScalarProperty Name="JobTemplateId" ColumnName="JobTemplateId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="ProNetTestModel.Location">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="Y" ColumnName="Y" />
+          <ScalarProperty Name="X" ColumnName="X" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Membership">
+      <EntityTypeMapping TypeName="ProNetTestModel.webpages_Membership">
+        <MappingFragment StoreEntitySet="webpages_Membership">
+          <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+          <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+          <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+          <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+          <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_OAuthMembership">
+      <EntityTypeMapping TypeName="ProNetTestModel.webpages_OAuthMembership">
+        <MappingFragment StoreEntitySet="webpages_OAuthMembership">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
+          <ScalarProperty Name="Provider" ColumnName="Provider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="webpages_Roles">
+      <EntityTypeMapping TypeName="ProNetTestModel.webpages_Roles">
+        <MappingFragment StoreEntitySet="webpages_Roles">
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Objects">
+      <EntityTypeMapping TypeName="ProNetTestModel.Object">
+        <MappingFragment StoreEntitySet="Objects">
+          <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+          <ScalarProperty Name="FlagText" ColumnName="FlagText" />
+          <ScalarProperty Name="FileAs" ColumnName="FileAs" />
+          <ScalarProperty Name="ObjectTypeId" ColumnName="ObjectTypeId" />
+          <ScalarProperty Name="ObjectID" ColumnName="ObjectID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObjectTypes">
+      <EntityTypeMapping TypeName="ProNetTestModel.ObjectType">
+        <MappingFragment StoreEntitySet="ObjectTypes">
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SystemCode" ColumnName="SystemCode" />
+          <ScalarProperty Name="ObjectTypeId" ColumnName="ObjectTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="ProNetTestModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Sid" ColumnName="Sid" />
+          <ScalarProperty Name="HideLoginDialog" ColumnName="HideLoginDialog" />
+          <ScalarProperty Name="Domain" ColumnName="Domain" />
+          <ScalarProperty Name="UseWindowsSecurity" ColumnName="UseWindowsSecurity" />
+          <ScalarProperty Name="ReportsToUserId" ColumnName="ReportsToUserId" />
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="Photograph" ColumnName="Photograph" />
+          <ScalarProperty Name="SecurityOption" ColumnName="SecurityOption" />
+          <ScalarProperty Name="Inactive" ColumnName="Inactive" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="LoginName" ColumnName="LoginName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CeeeOpportunityTypes">
+      <EntityTypeMapping TypeName="ProNetTestModel.CeeeOpportunityType">
+        <MappingFragment StoreEntitySet="CeeeOpportunityType">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="OpportunityName" ColumnName="OpportunityName" />
+          <ScalarProperty Name="OpportunityType" ColumnName="OpportunityType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientContacts">
+      <EntityTypeMapping TypeName="ProNetTestModel.ClientContact">
+        <MappingFragment StoreEntitySet="ClientContacts">
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="LeavingDate" ColumnName="LeavingDate" />
+          <ScalarProperty Name="HasLeft" ColumnName="HasLeft" />
+          <ScalarProperty Name="CanvassPeriodValueId" ColumnName="CanvassPeriodValueId" />
+          <ScalarProperty Name="ReportsToPersonId" ColumnName="ReportsToPersonId" />
+          <ScalarProperty Name="PlacementId" ColumnName="PlacementId" />
+          <ScalarProperty Name="EmploymentTypeId" ColumnName="EmploymentTypeId" />
+          <ScalarProperty Name="EmploymentEndDate" ColumnName="EmploymentEndDate" />
+          <ScalarProperty Name="EmploymentStartDate" ColumnName="EmploymentStartDate" />
+          <ScalarProperty Name="PrimaryEmailAddressPhoneId" ColumnName="PrimaryEmailAddressPhoneId" />
+          <ScalarProperty Name="PriorityValueId" ColumnName="PriorityValueId" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="PositionValueId" ColumnName="PositionValueId" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="ContactTypeId" ColumnName="ContactTypeId" />
+          <ScalarProperty Name="ContactPersonId" ColumnName="ContactPersonId" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="ClientContactId" ColumnName="ClientContactId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="People">
+      <EntityTypeMapping TypeName="ProNetTestModel.Person">
+        <MappingFragment StoreEntitySet="Person">
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+          <ScalarProperty Name="UpdatedUserId" ColumnName="UpdatedUserId" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedUserId" ColumnName="CreatedUserId" />
+          <ScalarProperty Name="Photograph" ColumnName="Photograph" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+          <ScalarProperty Name="MaritalStatusValueId" ColumnName="MaritalStatusValueId" />
+          <ScalarProperty Name="GenderValueId" ColumnName="GenderValueId" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Salutation" ColumnName="Salutation" />
+          <ScalarProperty Name="TitleValueId" ColumnName="TitleValueId" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="PersonName" ColumnName="PersonName" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CeeeClientAttributes">
+      <EntityTypeMapping TypeName="ProNetTestModel.CeeeClientAttribute">
+        <MappingFragment StoreEntitySet="CeeeClientAttribute">
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="HowHeard" ColumnName="HowHeard" />
+          <ScalarProperty Name="CompanySize" ColumnName="CompanySize" />
+          <ScalarProperty Name="OrganisationWebsite" ColumnName="OrganisationWebsite" />
+          <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+          <ScalarProperty Name="LandlineNumber" ColumnName="LandlineNumber" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="ClientAttributeID" ColumnName="ClientAttributeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CeeeJobTypes">
+      <EntityTypeMapping TypeName="ProNetTestModel.CeeeJobType">
+        <MappingFragment StoreEntitySet="CeeeJobType">
+          <ScalarProperty Name="JobType" ColumnName="JobType" />
+          <ScalarProperty Name="JobTypeID" ColumnName="JobTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CeeeUsers">
+      <EntityTypeMapping TypeName="ProNetTestModel.CeeeUser">
+        <MappingFragment StoreEntitySet="CeeeUser">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="HowHeard" ColumnName="HowHeard" />
+          <ScalarProperty Name="CompanySize" ColumnName="CompanySize" />
+          <ScalarProperty Name="OrgWebsite" ColumnName="OrgWebsite" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CeeeVolunteeringOneDayChallenges">
+      <EntityTypeMapping TypeName="ProNetTestModel.CeeeVolunteeringOneDayChallenge">
+        <MappingFragment StoreEntitySet="CeeeVolunteeringOneDayChallenge">
+          <ScalarProperty Name="OrganisationType" ColumnName="OrganisationType" />
+          <ScalarProperty Name="AlternateEmail" ColumnName="AlternateEmail" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="OpportunityTypes" ColumnName="OpportunityTypes" />
+          <ScalarProperty Name="VolunteeringTypeId" ColumnName="VolunteeringTypeId" />
+          <ScalarProperty Name="HasCarriedOutRiskAssesment" ColumnName="HasCarriedOutRiskAssesment" />
+          <ScalarProperty Name="HasInsuranceLiability" ColumnName="HasInsuranceLiability" />
+          <ScalarProperty Name="BudgetPlanFile" ColumnName="BudgetPlanFile" />
+          <ScalarProperty Name="SessionPlanFile" ColumnName="SessionPlanFile" />
+          <ScalarProperty Name="RiskAssesmentFile" ColumnName="RiskAssesmentFile" />
+          <ScalarProperty Name="IsCordinatedByUniversity" ColumnName="IsCordinatedByUniversity" />
+          <ScalarProperty Name="ExperienceNeeded" ColumnName="ExperienceNeeded" />
+          <ScalarProperty Name="WhatWillBeDoing" ColumnName="WhatWillBeDoing" />
+          <ScalarProperty Name="MeetingPoint" ColumnName="MeetingPoint" />
+          <ScalarProperty Name="FinishingTime" ColumnName="FinishingTime" />
+          <ScalarProperty Name="MeetingTime" ColumnName="MeetingTime" />
+          <ScalarProperty Name="When" ColumnName="When" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="ProjectEventTitle" ColumnName="ProjectEventTitle" />
+          <ScalarProperty Name="VolunteeringJobId" ColumnName="VolunteeringJobId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CeeeVolunteeringPlacements">
+      <EntityTypeMapping TypeName="ProNetTestModel.CeeeVolunteeringPlacement">
+        <MappingFragment StoreEntitySet="CeeeVolunteeringPlacement">
+          <ScalarProperty Name="AboutOrganisation" ColumnName="AboutOrganisation" />
+          <ScalarProperty Name="OrganisationType" ColumnName="OrganisationType" />
+          <ScalarProperty Name="AlternateEmail" ColumnName="AlternateEmail" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="OpportunityTypes" ColumnName="OpportunityTypes" />
+          <ScalarProperty Name="VolunteeringTypeID" ColumnName="VolunteeringTypeID" />
+          <ScalarProperty Name="NumberOfPositions" ColumnName="NumberOfPositions" />
+          <ScalarProperty Name="HasCarriedOutRiskAssesment" ColumnName="HasCarriedOutRiskAssesment" />
+          <ScalarProperty Name="HasLiabilityInsurance" ColumnName="HasLiabilityInsurance" />
+          <ScalarProperty Name="RoleDescriptionFile" ColumnName="RoleDescriptionFile" />
+          <ScalarProperty Name="HowToPostApplication" ColumnName="HowToPostApplication" />
+          <ScalarProperty Name="ApplicationForm" ColumnName="ApplicationForm" />
+          <ScalarProperty Name="ApplicationMethod" ColumnName="ApplicationMethod" />
+          <ScalarProperty Name="TrainingDetails" ColumnName="TrainingDetails" />
+          <ScalarProperty Name="SkillsRequired" ColumnName="SkillsRequired" />
+          <ScalarProperty Name="DurationNeeded" ColumnName="DurationNeeded" />
+          <ScalarProperty Name="DayTimeRequired" ColumnName="DayTimeRequired" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="RoleTitle" ColumnName="RoleTitle" />
+          <ScalarProperty Name="VolunteeringJobID" ColumnName="VolunteeringJobID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CeeeVolunteeringTypes">
+      <EntityTypeMapping TypeName="ProNetTestModel.CeeeVolunteeringType">
+        <MappingFragment StoreEntitySet="CeeeVolunteeringType">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="VolunteeringTypeID" ColumnName="VolunteeringTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="webpages_UsersInRoles" TypeName="ProNetTestModel.webpages_UsersInRoles" StoreEntitySet="webpages_UsersInRoles">
+      <EndProperty Name="CeeeUser">
+        <ScalarProperty Name="UserID" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="webpages_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="CeeeJobContractTypes">
+      <EntityTypeMapping TypeName="ProNetTestModel.CeeeJobContractType">
+        <MappingFragment StoreEntitySet="CeeeJobContractType">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="JobContractTypeId" ColumnName="JobContractTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CeeeJobDescriptions">
+      <EntityTypeMapping TypeName="ProNetTestModel.CeeeJobDescription">
+        <MappingFragment StoreEntitySet="CeeeJobDescription">
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="JobContractTypeID" ColumnName="JobContractTypeID" />
+          <ScalarProperty Name="VolunteeringPlacmentID" ColumnName="VolunteeringPlacmentID" />
+          <ScalarProperty Name="OneDayVolunteeringID" ColumnName="OneDayVolunteeringID" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="VolunteeringTypeID" ColumnName="VolunteeringTypeID" />
+          <ScalarProperty Name="IsVolunteering" ColumnName="IsVolunteering" />
+          <ScalarProperty Name="NoOfHoursPerWeek" ColumnName="NoOfHoursPerWeek" />
+          <ScalarProperty Name="JobID" ColumnName="JobID" />
+          <ScalarProperty Name="ContractTypeID" ColumnName="ContractTypeID" />
+          <ScalarProperty Name="HowEmployeeApproaches" ColumnName="HowEmployeeApproaches" />
+          <ScalarProperty Name="SalaryPeriod" ColumnName="SalaryPeriod" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="ClosingDate" ColumnName="ClosingDate" />
+          <ScalarProperty Name="JobCategoryID" ColumnName="JobCategoryID" />
+          <ScalarProperty Name="JobTypeID" ColumnName="JobTypeID" />
+          <ScalarProperty Name="JobDescriptionID" ColumnName="JobDescriptionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

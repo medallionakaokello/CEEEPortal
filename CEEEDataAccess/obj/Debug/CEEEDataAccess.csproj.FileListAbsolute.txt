@@ -1,0 +1,11 @@
+C:\C#Projects\CEEEPortal\CEEEPortal\CEEEDataAccess\bin\Debug\CEEEDataAccess.dll
+C:\C#Projects\CEEEPortal\CEEEPortal\CEEEDataAccess\bin\Debug\CEEEDataAccess.pdb
+C:\C#Projects\CEEEPortal\CEEEPortal\CEEEDataAccess\obj\Debug\CEEEDataAccess.dll
+C:\C#Projects\CEEEPortal\CEEEPortal\CEEEDataAccess\obj\Debug\CEEEDataAccess.pdb
+C:\Development\CEEEPortal\CEEEDataAccess\bin\Debug\CEEEDataAccess.dll.config
+C:\Development\CEEEPortal\CEEEDataAccess\bin\Debug\CEEEDataAccess.dll
+C:\Development\CEEEPortal\CEEEDataAccess\bin\Debug\CEEEDataAccess.pdb
+C:\Development\CEEEPortal\CEEEDataAccess\bin\Debug\EntityFramework.dll
+C:\Development\CEEEPortal\CEEEDataAccess\bin\Debug\EntityFramework.xml
+C:\Development\CEEEPortal\CEEEDataAccess\obj\Debug\CEEEDataAccess.dll
+C:\Development\CEEEPortal\CEEEDataAccess\obj\Debug\CEEEDataAccess.pdb

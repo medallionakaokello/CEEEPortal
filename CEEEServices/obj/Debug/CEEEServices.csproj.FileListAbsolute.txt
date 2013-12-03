@@ -1,0 +1,8 @@
+C:\C#Projects\CEEEPortal\CEEEPortal\CEEEServices\bin\Debug\CEEEServices.dll
+C:\C#Projects\CEEEPortal\CEEEPortal\CEEEServices\bin\Debug\CEEEServices.pdb
+C:\C#Projects\CEEEPortal\CEEEPortal\CEEEServices\obj\Debug\CEEEServices.dll
+C:\C#Projects\CEEEPortal\CEEEPortal\CEEEServices\obj\Debug\CEEEServices.pdb
+C:\Development\CEEEPortal\CEEEServices\bin\Debug\CEEEServices.dll
+C:\Development\CEEEPortal\CEEEServices\bin\Debug\CEEEServices.pdb
+C:\Development\CEEEPortal\CEEEServices\obj\Debug\CEEEServices.dll
+C:\Development\CEEEPortal\CEEEServices\obj\Debug\CEEEServices.pdb

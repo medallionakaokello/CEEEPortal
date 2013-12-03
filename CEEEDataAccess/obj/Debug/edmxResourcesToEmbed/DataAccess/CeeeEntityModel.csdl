@@ -1,0 +1,1248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProNetTestModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ProNetTestEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Clients" EntityType="ProNetTestModel.Client" />
+    <EntitySet Name="DocumentContents" EntityType="ProNetTestModel.DocumentContent" />
+    <EntitySet Name="Documents" EntityType="ProNetTestModel.Document" />
+    <EntitySet Name="DocumentStatus" EntityType="ProNetTestModel.DocumentStatu" />
+    <EntitySet Name="EmploymentTypes" EntityType="ProNetTestModel.EmploymentType" />
+    <EntitySet Name="JobAttributes" EntityType="ProNetTestModel.JobAttribute" />
+    <EntitySet Name="JobCategories" EntityType="ProNetTestModel.JobCategory" />
+    <EntitySet Name="JobDocuments" EntityType="ProNetTestModel.JobDocument" />
+    <EntitySet Name="Jobs" EntityType="ProNetTestModel.Job" />
+    <AssociationSet Name="FK_Jobs_ClientHirerLegalEntity" Association="ProNetTestModel.FK_Jobs_ClientHirerLegalEntity">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Jobs_Clients" Association="ProNetTestModel.FK_Jobs_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Jobs" EntitySet="Jobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentContent_Documents" Association="ProNetTestModel.FK_DocumentContent_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="DocumentContent" EntitySet="DocumentContents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_DocumentStatus" Association="ProNetTestModel.FK_Documents_DocumentStatus">
+      <End Role="DocumentStatus" EntitySet="DocumentStatus" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobDocuments_Documents" Association="ProNetTestModel.FK_JobDocuments_Documents">
+      <End Role="Documents" EntitySet="Documents" />
+      <End Role="JobDocuments" EntitySet="JobDocuments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobAttributes_Jobs" Association="ProNetTestModel.FK_JobAttributes_Jobs">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="JobAttributes" EntitySet="JobAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobDocuments_Jobs" Association="ProNetTestModel.FK_JobDocuments_Jobs">
+      <End Role="Jobs" EntitySet="Jobs" />
+      <End Role="JobDocuments" EntitySet="JobDocuments" />
+    </AssociationSet>
+    <EntitySet Name="Locations" EntityType="ProNetTestModel.Location" />
+    <AssociationSet Name="FK_Clients_Locations" Association="ProNetTestModel.FK_Clients_Locations">
+      <End Role="Location" EntitySet="Locations" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <EntitySet Name="webpages_Membership" EntityType="ProNetTestModel.webpages_Membership" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="ProNetTestModel.webpages_OAuthMembership" />
+    <EntitySet Name="webpages_Roles" EntityType="ProNetTestModel.webpages_Roles" />
+    <EntitySet Name="Objects" EntityType="ProNetTestModel.Object" />
+    <AssociationSet Name="FK_Clients_Objects" Association="ProNetTestModel.FK_Clients_Objects">
+      <End Role="Object" EntitySet="Objects" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Objects_Locations" Association="ProNetTestModel.FK_Objects_Locations">
+      <End Role="Location" EntitySet="Locations" />
+      <End Role="Object" EntitySet="Objects" />
+    </AssociationSet>
+    <EntitySet Name="ObjectTypes" EntityType="ProNetTestModel.ObjectType" />
+    <AssociationSet Name="FK_Objects_ObjectTypes" Association="ProNetTestModel.FK_Objects_ObjectTypes">
+      <End Role="ObjectType" EntitySet="ObjectTypes" />
+      <End Role="Object" EntitySet="Objects" />
+    </AssociationSet>
+    <EntitySet Name="Users" EntityType="ProNetTestModel.User" />
+    <AssociationSet Name="FK_Clients_Users" Association="ProNetTestModel.FK_Clients_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_Users1" Association="ProNetTestModel.FK_Clients_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Users" Association="ProNetTestModel.FK_Documents_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Document" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_Users1" Association="ProNetTestModel.FK_Documents_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Document" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Objects_Users" Association="ProNetTestModel.FK_Objects_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Object" EntitySet="Objects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users" Association="ProNetTestModel.FK_Users_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="User1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users1" Association="ProNetTestModel.FK_Users_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="User1" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users2" Association="ProNetTestModel.FK_Users_Users2">
+      <End Role="User" EntitySet="Users" />
+      <End Role="User1" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="CeeeOpportunityTypes" EntityType="ProNetTestModel.CeeeOpportunityType" />
+    <EntitySet Name="ClientContacts" EntityType="ProNetTestModel.ClientContact" />
+    <EntitySet Name="People" EntityType="ProNetTestModel.Person" />
+    <AssociationSet Name="FK_ClientContacts_Clients" Association="ProNetTestModel.FK_ClientContacts_Clients">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="ClientContact" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_EmploymentTypes" Association="ProNetTestModel.FK_ClientContacts_EmploymentTypes">
+      <End Role="EmploymentType" EntitySet="EmploymentTypes" />
+      <End Role="ClientContact" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_Person" Association="ProNetTestModel.FK_ClientContacts_Person">
+      <End Role="Person" EntitySet="People" />
+      <End Role="ClientContact" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_Person1" Association="ProNetTestModel.FK_ClientContacts_Person1">
+      <End Role="Person" EntitySet="People" />
+      <End Role="ClientContact" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_Users" Association="ProNetTestModel.FK_ClientContacts_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ClientContact" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ClientContacts_Users1" Association="ProNetTestModel.FK_ClientContacts_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="ClientContact" EntitySet="ClientContacts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clients_ClientContacts" Association="ProNetTestModel.FK_Clients_ClientContacts">
+      <End Role="ClientContact" EntitySet="ClientContacts" />
+      <End Role="Client" EntitySet="Clients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Objects" Association="ProNetTestModel.FK_Person_Objects">
+      <End Role="Object" EntitySet="Objects" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Users" Association="ProNetTestModel.FK_Person_Users">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Person_Users1" Association="ProNetTestModel.FK_Person_Users1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Person" EntitySet="People" />
+    </AssociationSet>
+    <EntitySet Name="CeeeClientAttributes" EntityType="ProNetTestModel.CeeeClientAttribute" />
+    <EntitySet Name="CeeeJobTypes" EntityType="ProNetTestModel.CeeeJobType" />
+    <EntitySet Name="CeeeUsers" EntityType="ProNetTestModel.CeeeUser" />
+    <EntitySet Name="CeeeVolunteeringOneDayChallenges" EntityType="ProNetTestModel.CeeeVolunteeringOneDayChallenge" />
+    <EntitySet Name="CeeeVolunteeringPlacements" EntityType="ProNetTestModel.CeeeVolunteeringPlacement" />
+    <EntitySet Name="CeeeVolunteeringTypes" EntityType="ProNetTestModel.CeeeVolunteeringType" />
+    <AssociationSet Name="FK_CeeeClientAttribute_CeeeUser" Association="ProNetTestModel.FK_CeeeClientAttribute_CeeeUser">
+      <End Role="CeeeUser" EntitySet="CeeeUsers" />
+      <End Role="CeeeClientAttribute" EntitySet="CeeeClientAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeClientAttribute_Client" Association="ProNetTestModel.FK_CeeeClientAttribute_Client">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="CeeeClientAttribute" EntitySet="CeeeClientAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeOpportunityType_CeeeUser" Association="ProNetTestModel.FK_CeeeOpportunityType_CeeeUser">
+      <End Role="CeeeUser" EntitySet="CeeeUsers" />
+      <End Role="CeeeOpportunityType" EntitySet="CeeeOpportunityTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeUser_Clients" Association="ProNetTestModel.FK_CeeeUser_Clients">
+      <End Role="Client" EntitySet="Clients" />
+      <End Role="CeeeUser" EntitySet="CeeeUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeVolunteeringOneDayChallenge_CeeeVolunteeringType" Association="ProNetTestModel.FK_CeeeVolunteeringOneDayChallenge_CeeeVolunteeringType">
+      <End Role="CeeeVolunteeringType" EntitySet="CeeeVolunteeringTypes" />
+      <End Role="CeeeVolunteeringOneDayChallenge" EntitySet="CeeeVolunteeringOneDayChallenges" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeVolunteeringPlacement_CeeeVolunteeringType" Association="ProNetTestModel.FK_CeeeVolunteeringPlacement_CeeeVolunteeringType">
+      <End Role="CeeeVolunteeringType" EntitySet="CeeeVolunteeringTypes" />
+      <End Role="CeeeVolunteeringPlacement" EntitySet="CeeeVolunteeringPlacements" />
+    </AssociationSet>
+    <AssociationSet Name="webpages_UsersInRoles" Association="ProNetTestModel.webpages_UsersInRoles">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="CeeeUser" EntitySet="CeeeUsers" />
+    </AssociationSet>
+    <EntitySet Name="CeeeJobContractTypes" EntityType="ProNetTestModel.CeeeJobContractType" />
+    <EntitySet Name="CeeeJobDescriptions" EntityType="ProNetTestModel.CeeeJobDescription" />
+    <AssociationSet Name="FK_CeeeJobDescription_CeeeJobContractType" Association="ProNetTestModel.FK_CeeeJobDescription_CeeeJobContractType">
+      <End Role="CeeeJobContractType" EntitySet="CeeeJobContractTypes" />
+      <End Role="CeeeJobDescription" EntitySet="CeeeJobDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobContractType_JobDescription" Association="ProNetTestModel.FK_JobContractType_JobDescription">
+      <End Role="CeeeJobContractType" EntitySet="CeeeJobContractTypes" />
+      <End Role="CeeeJobContractType1" EntitySet="CeeeJobContractTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeJobDescription_CeeeJOneDayChallenge" Association="ProNetTestModel.FK_CeeeJobDescription_CeeeJOneDayChallenge">
+      <End Role="CeeeVolunteeringOneDayChallenge" EntitySet="CeeeVolunteeringOneDayChallenges" />
+      <End Role="CeeeJobDescription" EntitySet="CeeeJobDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeJobDescription_Job" Association="ProNetTestModel.FK_CeeeJobDescription_Job">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="CeeeJobDescription" EntitySet="CeeeJobDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeJobDescription_JobType" Association="ProNetTestModel.FK_CeeeJobDescription_JobType">
+      <End Role="CeeeJobType" EntitySet="CeeeJobTypes" />
+      <End Role="CeeeJobDescription" EntitySet="CeeeJobDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CeeeJobDescription_VolunteeringPlacement" Association="ProNetTestModel.FK_CeeeJobDescription_VolunteeringPlacement">
+      <End Role="CeeeVolunteeringPlacement" EntitySet="CeeeVolunteeringPlacements" />
+      <End Role="CeeeJobDescription" EntitySet="CeeeJobDescriptions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="ClientID" />
+    </Key>
+    <Property Name="ClientID" Type="Int32" Nullable="false" />
+    <Property Name="Company" Type="String" Nullable="false" MaxLength="75" Unicode="true" FixedLength="false" />
+    <Property Name="OurReference" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="SourceId" Type="Int32" />
+    <Property Name="LocationId" Type="Int32" />
+    <Property Name="DefaultTermPerc" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PrimaryEmailAddressPhoneId" Type="Int32" />
+    <Property Name="CanvassPeriodValueId" Type="Int32" />
+    <Property Name="InvoiceContactId" Type="Int32" />
+    <Property Name="InvoiceAddressId" Type="Int32" />
+    <Property Name="VatNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="RegNo" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedUserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUserId" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedTimestamp" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <Property Name="CreditLimit" Type="Int32" />
+    <Property Name="CreditReviewDate" Type="DateTime" Precision="3" />
+    <Property Name="NoVAT" Type="Boolean" />
+    <Property Name="CreditCheck" Type="Boolean" />
+    <Property Name="CreditStop" Type="Boolean" />
+    <Property Name="CreditNotes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Jobs" Relationship="ProNetTestModel.FK_Jobs_ClientHirerLegalEntity" FromRole="Clients" ToRole="Jobs" />
+    <NavigationProperty Name="Jobs1" Relationship="ProNetTestModel.FK_Jobs_Clients" FromRole="Clients" ToRole="Jobs" />
+    <NavigationProperty Name="Location" Relationship="ProNetTestModel.FK_Clients_Locations" FromRole="Client" ToRole="Location" />
+    <NavigationProperty Name="Object" Relationship="ProNetTestModel.FK_Clients_Objects" FromRole="Client" ToRole="Object" />
+    <NavigationProperty Name="User" Relationship="ProNetTestModel.FK_Clients_Users" FromRole="Client" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="ProNetTestModel.FK_Clients_Users1" FromRole="Client" ToRole="User" />
+    <NavigationProperty Name="ClientContacts" Relationship="ProNetTestModel.FK_ClientContacts_Clients" FromRole="Client" ToRole="ClientContact" />
+    <NavigationProperty Name="ClientContact" Relationship="ProNetTestModel.FK_Clients_ClientContacts" FromRole="Client" ToRole="ClientContact" />
+    <NavigationProperty Name="CeeeClientAttribute" Relationship="ProNetTestModel.FK_CeeeClientAttribute_Client" FromRole="Client" ToRole="CeeeClientAttribute" />
+    <NavigationProperty Name="CeeeUsers" Relationship="ProNetTestModel.FK_CeeeUser_Clients" FromRole="Client" ToRole="CeeeUser" />
+  </EntityType>
+  <EntityType Name="DocumentContent">
+    <Key>
+      <PropertyRef Name="DocumentId" />
+    </Key>
+    <Property Name="DocumentId" Type="Int32" Nullable="false" />
+    <Property Name="Document" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FileExtension" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedUserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUserId" Type="Int32" />
+    <Property Name="UpdatedTimestamp" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <Property Name="IsStoredExternally" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Document1" Relationship="ProNetTestModel.FK_DocumentContent_Documents" FromRole="DocumentContent" ToRole="Documents" />
+  </EntityType>
+  <EntityType Name="Document">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="NotebookItemId" Type="Int32" />
+    <Property Name="TemplateID" Type="Int32" />
+    <Property Name="Publishable" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="Incoming" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="DocumentStatusId" Type="Int32" />
+    <Property Name="CreatedUserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUserId" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedTimestamp" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <Property Name="ExternalEditorOnly" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="Protected" Type="Boolean" Nullable="false" />
+    <Property Name="SourceDoc" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="DocumentContent" Relationship="ProNetTestModel.FK_DocumentContent_Documents" FromRole="Documents" ToRole="DocumentContent" />
+    <NavigationProperty Name="DocumentStatu" Relationship="ProNetTestModel.FK_Documents_DocumentStatus" FromRole="Documents" ToRole="DocumentStatus" />
+    <NavigationProperty Name="JobDocuments" Relationship="ProNetTestModel.FK_JobDocuments_Documents" FromRole="Documents" ToRole="JobDocuments" />
+    <NavigationProperty Name="User" Relationship="ProNetTestModel.FK_Documents_Users" FromRole="Document" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="ProNetTestModel.FK_Documents_Users1" FromRole="Document" ToRole="User" />
+  </EntityType>
+  <EntityType Name="DocumentStatu">
+    <Key>
+      <PropertyRef Name="DocumentStatusID" />
+    </Key>
+    <Property Name="DocumentStatusID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SystemCode" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedUserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUserId" Type="Int32" />
+    <Property Name="UpdatedTimestamp" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <Property Name="StatusIcon" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Documents" Relationship="ProNetTestModel.FK_Documents_DocumentStatus" FromRole="DocumentStatus" ToRole="Documents" />
+  </EntityType>
+  <EntityType Name="EmploymentType">
+    <Key>
+      <PropertyRef Name="EmploymentTypeId" />
+    </Key>
+    <Property Name="EmploymentTypeId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SystemCode" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedUserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUserId" Type="Int32" />
+    <Property Name="UpdatedTimestamp" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="ClientContacts" Relationship="ProNetTestModel.FK_ClientContacts_EmploymentTypes" FromRole="EmploymentType" ToRole="ClientContact" />
+  </EntityType>
+  <EntityType Name="JobAttribute">
+    <Key>
+      <PropertyRef Name="JobAttributeId" />
+    </Key>
+    <Property Name="JobAttributeId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="JobId" Type="Int32" Nullable="false" />
+    <Property Name="AttributeId" Type="Int32" Nullable="false" />
+    <Property Name="Grade" Type="Int32" />
+    <Property Name="Set" Type="Int32" />
+    <Property Name="EffectiveDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedUserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUserId" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedTimestamp" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Job" Relationship="ProNetTestModel.FK_JobAttributes_Jobs" FromRole="JobAttributes" ToRole="Jobs" />
+  </EntityType>
+  <EntityType Name="JobCategory">
+    <Key>
+      <PropertyRef Name="JobCategoryId" />
+    </Key>
+    <Property Name="JobCategoryId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="SystemCode" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedUserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUserId" Type="Int32" />
+    <Property Name="UpdatedTimeStamp" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="JobDocument">
+    <Key>
+      <PropertyRef Name="JobDocumentId" />
+    </Key>
+    <Property Name="JobDocumentId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="JobId" Type="Int32" Nullable="false" />
+    <Property Name="Sequence" Type="Int32" />
+    <Property Name="JobDocDefinitionId" Type="Int32" />
+    <Property Name="DocumentId" Type="Int32" />
+    <Property Name="Completed" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedUserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUserId" Type="Int32" />
+    <Property Name="UpdatedTimestamp" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Document" Relationship="ProNetTestModel.FK_JobDocuments_Documents" FromRole="JobDocuments" ToRole="Documents" />
+    <NavigationProperty Name="Job" Relationship="ProNetTestModel.FK_JobDocuments_Jobs" FromRole="JobDocuments" ToRole="Jobs" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="JobId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="ClientId" Type="Int32" Nullable="false" />
+    <Property Name="SectorId" Type="Int32" Nullable="false" />
+    <Property Name="JobRefNo" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="ClientContactId" Type="Int32" />
+    <Property Name="PositionAttributeId" Type="Int32" />
+    <Property Name="PosCode" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="LocationId" Type="Int32" />
+    <Property Name="JobTitle" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="AreaAttributeId" Type="Int32" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EmploymentTypeId" Type="Int32" />
+    <Property Name="MinBasic" Type="Decimal" Precision="19" Scale="7" />
+    <Property Name="MaxBasic" Type="Decimal" Precision="19" Scale="7" />
+    <Property Name="MinPackage" Type="Decimal" Precision="19" Scale="7" />
+    <Property Name="MaxPackage" Type="Decimal" Precision="19" Scale="7" />
+    <Property Name="MinAge" Type="Int32" />
+    <Property Name="MaxAge" Type="Int32" />
+    <Property Name="StatusId" Type="Int32" />
+    <Property Name="StatusDate" Type="DateTime" Precision="3" />
+    <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="InterviewAddress" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="AppIntInfo" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="HoursPerWeek" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="CurrencyId" Type="Int32" />
+    <Property Name="Published" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="PublishedJobCategoryId" Type="Int32" />
+    <Property Name="PublishedJobDescription" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Archived" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+    <Property Name="CVKeyWord" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="CreatedUserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedUserId" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedTimestamp" Type="Binary" MaxLength="8" FixedLength="true" p1:StoreGeneratedPattern="Computed" />
+    <Property Name="WorkAddress" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="PurchaseOrderNo" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="NoOfPlaces" Type="Int32" />
+    <Property Name="InvoiceContactId" Type="Int32" />
+    <Property Name="CommissionPerc" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="PlacementFee" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Salary" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="Tier2ReleaseHold" Type="Boolean" />
+    <Property Name="Retainer" Type="Boolean" />
+    <Property Name="TotalRetainerFee" Type="Decimal" Precision="9" Scale="2" />
+    <Property Name="ClientHirerLegalEntityId" Type="Int32" />
+    <Property Name="JobTemplateId" Type="Int32" />
+    <NavigationProperty Name="Client" Relationship="ProNetTestModel.FK_Jobs_ClientHirerLegalEntity" FromRole="Jobs" ToRole="Clients" />
+    <NavigationProperty Name="Client1" Relationship="ProNetTestModel.FK_Jobs_Clients" FromRole="Jobs" ToRole="Clients" />
+    <NavigationProperty Name="JobAttributes" Relationship="ProNetTestModel.FK_JobAttributes_Jobs" FromRole="Jobs" ToRole="JobAttributes" />
+    <NavigationProperty Name="JobDocuments" Relationship="ProNetTestModel.FK_JobDocuments_Jobs" FromRole="Jobs" ToRole="JobDocuments" />
+    <NavigationProperty Name="CeeeJobDescriptions" Relationship="ProNetTestModel.FK_CeeeJobDescription_Job" FromRole="Job" ToRole="CeeeJobDescription" />
+  </EntityType>
+  <Association Name="FK_Jobs_ClientHirerLegalEntity">
+    <End Role="Clients" Type="ProNetTestModel.Client" Multiplicity="0..1" />
+    <End Role="Jobs" Type="ProNetTestModel.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="ClientHirerLegalEntityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Jobs_Clients">
+    <End Role="Clients" Type="ProNetTestModel.Client" Multiplicity="1" />
+    <End Role="Jobs" Type="ProNetTestModel.Job" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="Jobs">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentContent_Documents">
+    <End Role="Documents" Type="ProNetTestModel.Document" Multiplicity="1" />
+    <End Role="DocumentContent" Type="ProNetTestModel.DocumentContent" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="DocumentID" />
+      </Principal>
+      <Dependent Role="DocumentContent">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_DocumentStatus">
+    <End Role="DocumentStatus" Type="ProNetTestModel.DocumentStatu" Multiplicity="0..1" />
+    <End Role="Documents" Type="ProNetTestModel.Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentStatus">
+        <PropertyRef Name="DocumentStatusID" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="DocumentStatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobDocuments_Documents">
+    <End Role="Documents" Type="ProNetTestModel.Document" Multiplicity="0..1" />
+    <End Role="JobDocuments" Type="ProNetTestModel.JobDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Documents">
+        <PropertyRef Name="DocumentID" />
+      </Principal>
+      <Dependent Role="JobDocuments">
+        <PropertyRef Name="DocumentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobAttributes_Jobs">
+    <End Role="Jobs" Type="ProNetTestModel.Job" Multiplicity="1" />
+    <End Role="JobAttributes" Type="ProNetTestModel.JobAttribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="JobAttributes">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobDocuments_Jobs">
+    <End Role="Jobs" Type="ProNetTestModel.Job" Multiplicity="1" />
+    <End Role="JobDocuments" Type="ProNetTestModel.JobDocument" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jobs">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="JobDocuments">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationId" />
+    </Key>
+    <Property Type="Int32" Name="LocationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="X" />
+    <Property Type="Int32" Name="Y" />
+    <Property Type="Decimal" Name="Latitude" Precision="10" Scale="6" />
+    <Property Type="Decimal" Name="Longitude" Precision="10" Scale="6" />
+    <Property Type="Int32" Name="CreatedUserId" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="UpdatedUserId" />
+    <Property Type="Binary" Name="UpdatedTimestamp" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Clients" Relationship="ProNetTestModel.FK_Clients_Locations" FromRole="Location" ToRole="Client" />
+    <NavigationProperty Name="Objects" Relationship="ProNetTestModel.FK_Objects_Locations" FromRole="Location" ToRole="Object" />
+  </EntityType>
+  <Association Name="FK_Clients_Locations">
+    <End Type="ProNetTestModel.Location" Role="Location" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.Client" Role="Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="LocationId" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Precision="3" />
+    <Property Type="String" Name="ConfirmationToken" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsConfirmed" />
+    <Property Type="DateTime" Name="LastPasswordFailureDate" Precision="3" />
+    <Property Type="Int32" Name="PasswordFailuresSinceLastSuccess" Nullable="false" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="PasswordChangedDate" Precision="3" />
+    <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PasswordVerificationToken" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="PasswordVerificationTokenExpirationDate" Precision="3" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Type="String" Name="Provider" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ProviderUserId" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Type="Int32" Name="RoleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CeeeUsers" Relationship="ProNetTestModel.webpages_UsersInRoles" FromRole="webpages_Roles" ToRole="CeeeUser" />
+  </EntityType>
+  <EntityType Name="Object">
+    <Key>
+      <PropertyRef Name="ObjectID" />
+    </Key>
+    <Property Type="Int32" Name="ObjectID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ObjectTypeId" Nullable="false" />
+    <Property Type="String" Name="FileAs" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="FlagText" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="LocationId" />
+    <Property Type="Int32" Name="CreatedUserId" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="UpdatedUserId" />
+    <Property Type="Binary" Name="UpdatedTimestamp" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="String" Name="SourceId" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Client" Relationship="ProNetTestModel.FK_Clients_Objects" FromRole="Object" ToRole="Client" />
+    <NavigationProperty Name="Location" Relationship="ProNetTestModel.FK_Objects_Locations" FromRole="Object" ToRole="Location" />
+    <NavigationProperty Name="ObjectType" Relationship="ProNetTestModel.FK_Objects_ObjectTypes" FromRole="Object" ToRole="ObjectType" />
+    <NavigationProperty Name="User" Relationship="ProNetTestModel.FK_Objects_Users" FromRole="Object" ToRole="User" />
+    <NavigationProperty Name="Person" Relationship="ProNetTestModel.FK_Person_Objects" FromRole="Object" ToRole="Person" />
+  </EntityType>
+  <Association Name="FK_Clients_Objects">
+    <End Type="ProNetTestModel.Object" Role="Object" Multiplicity="1" />
+    <End Type="ProNetTestModel.Client" Role="Client" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Object">
+        <PropertyRef Name="ObjectID" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Objects_Locations">
+    <End Type="ProNetTestModel.Location" Role="Location" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.Object" Role="Object" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="LocationId" />
+      </Principal>
+      <Dependent Role="Object">
+        <PropertyRef Name="LocationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ObjectType">
+    <Key>
+      <PropertyRef Name="ObjectTypeId" />
+    </Key>
+    <Property Type="Int32" Name="ObjectTypeId" Nullable="false" />
+    <Property Type="String" Name="SystemCode" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CreatedUserId" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="UpdatedUserId" />
+    <Property Type="Binary" Name="UpdatedTimestamp" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Objects" Relationship="ProNetTestModel.FK_Objects_ObjectTypes" FromRole="ObjectType" ToRole="Object" />
+  </EntityType>
+  <Association Name="FK_Objects_ObjectTypes">
+    <End Type="ProNetTestModel.ObjectType" Role="ObjectType" Multiplicity="1" />
+    <End Type="ProNetTestModel.Object" Role="Object" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObjectType">
+        <PropertyRef Name="ObjectTypeId" />
+      </Principal>
+      <Dependent Role="Object">
+        <PropertyRef Name="ObjectTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Int32" Name="UserId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="LoginName" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserName" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Surname" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JobTitle" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EmailAddress" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Inactive" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SecurityOption" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Photograph" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int32" Name="CreatedUserId" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="UpdatedUserId" />
+    <Property Type="Binary" Name="UpdatedTimestamp" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="Int32" Name="ReportsToUserId" />
+    <Property Type="Boolean" Name="UseWindowsSecurity" />
+    <Property Type="String" Name="Domain" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="HideLoginDialog" />
+    <Property Type="String" Name="Sid" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Clients" Relationship="ProNetTestModel.FK_Clients_Users" FromRole="User" ToRole="Client" />
+    <NavigationProperty Name="Clients1" Relationship="ProNetTestModel.FK_Clients_Users1" FromRole="User" ToRole="Client" />
+    <NavigationProperty Name="Documents" Relationship="ProNetTestModel.FK_Documents_Users" FromRole="User" ToRole="Document" />
+    <NavigationProperty Name="Documents1" Relationship="ProNetTestModel.FK_Documents_Users1" FromRole="User" ToRole="Document" />
+    <NavigationProperty Name="Objects" Relationship="ProNetTestModel.FK_Objects_Users" FromRole="User" ToRole="Object" />
+    <NavigationProperty Name="Users1" Relationship="ProNetTestModel.FK_Users_Users" FromRole="User" ToRole="User1" />
+    <NavigationProperty Name="User1" Relationship="ProNetTestModel.FK_Users_Users" FromRole="User1" ToRole="User" />
+    <NavigationProperty Name="Users11" Relationship="ProNetTestModel.FK_Users_Users1" FromRole="User" ToRole="User1" />
+    <NavigationProperty Name="User2" Relationship="ProNetTestModel.FK_Users_Users1" FromRole="User1" ToRole="User" />
+    <NavigationProperty Name="Users12" Relationship="ProNetTestModel.FK_Users_Users2" FromRole="User" ToRole="User1" />
+    <NavigationProperty Name="User3" Relationship="ProNetTestModel.FK_Users_Users2" FromRole="User1" ToRole="User" />
+    <NavigationProperty Name="ClientContacts" Relationship="ProNetTestModel.FK_ClientContacts_Users" FromRole="User" ToRole="ClientContact" />
+    <NavigationProperty Name="ClientContacts1" Relationship="ProNetTestModel.FK_ClientContacts_Users1" FromRole="User" ToRole="ClientContact" />
+    <NavigationProperty Name="People" Relationship="ProNetTestModel.FK_Person_Users" FromRole="User" ToRole="Person" />
+    <NavigationProperty Name="People1" Relationship="ProNetTestModel.FK_Person_Users1" FromRole="User" ToRole="Person" />
+  </EntityType>
+  <Association Name="FK_Clients_Users">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="1" />
+    <End Type="ProNetTestModel.Client" Role="Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_Users1">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.Client" Role="Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="UpdatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Users">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="1" />
+    <End Type="ProNetTestModel.Document" Role="Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_Users1">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.Document" Role="Document" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Document">
+        <PropertyRef Name="UpdatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Objects_Users">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="1" />
+    <End Type="ProNetTestModel.Object" Role="Object" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Object">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="1" />
+    <End Type="ProNetTestModel.User" Role="User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users1">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.User" Role="User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="UpdatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users2">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.User" Role="User1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="User1">
+        <PropertyRef Name="ReportsToUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CeeeOpportunityType">
+    <Key>
+      <PropertyRef Name="OpportunityType" />
+    </Key>
+    <Property Type="Int32" Name="OpportunityType" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="OpportunityName" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="UserID" />
+    <NavigationProperty Name="CeeeUser" Relationship="ProNetTestModel.FK_CeeeOpportunityType_CeeeUser" FromRole="CeeeOpportunityType" ToRole="CeeeUser" />
+  </EntityType>
+  <EntityType Name="ClientContact">
+    <Key>
+      <PropertyRef Name="ClientContactId" />
+    </Key>
+    <Property Type="Int32" Name="ClientContactId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ClientId" Nullable="false" />
+    <Property Type="Int32" Name="ContactPersonId" Nullable="false" />
+    <Property Type="Int32" Name="ContactTypeId" Nullable="false" />
+    <Property Type="String" Name="JobTitle" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PositionValueId" />
+    <Property Type="String" Name="Department" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PriorityValueId" />
+    <Property Type="Int32" Name="PrimaryEmailAddressPhoneId" />
+    <Property Type="DateTime" Name="EmploymentStartDate" Precision="3" />
+    <Property Type="DateTime" Name="EmploymentEndDate" Precision="3" />
+    <Property Type="Int32" Name="EmploymentTypeId" />
+    <Property Type="Int32" Name="PlacementId" />
+    <Property Type="Int32" Name="ReportsToPersonId" />
+    <Property Type="Int32" Name="CanvassPeriodValueId" />
+    <Property Type="String" Name="HasLeft" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LeavingDate" Precision="3" />
+    <Property Type="Int32" Name="CreatedUserId" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="UpdatedUserId" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="3" />
+    <Property Type="Binary" Name="UpdatedTimestamp" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="Client" Relationship="ProNetTestModel.FK_ClientContacts_Clients" FromRole="ClientContact" ToRole="Client" />
+    <NavigationProperty Name="EmploymentType" Relationship="ProNetTestModel.FK_ClientContacts_EmploymentTypes" FromRole="ClientContact" ToRole="EmploymentType" />
+    <NavigationProperty Name="Person" Relationship="ProNetTestModel.FK_ClientContacts_Person" FromRole="ClientContact" ToRole="Person" />
+    <NavigationProperty Name="Person1" Relationship="ProNetTestModel.FK_ClientContacts_Person1" FromRole="ClientContact" ToRole="Person" />
+    <NavigationProperty Name="User" Relationship="ProNetTestModel.FK_ClientContacts_Users" FromRole="ClientContact" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="ProNetTestModel.FK_ClientContacts_Users1" FromRole="ClientContact" ToRole="User" />
+    <NavigationProperty Name="Clients" Relationship="ProNetTestModel.FK_Clients_ClientContacts" FromRole="ClientContact" ToRole="Client" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonID" />
+    </Key>
+    <Property Type="Int32" Name="PersonID" Nullable="false" />
+    <Property Type="String" Name="PersonName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Surname" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="TitleValueId" />
+    <Property Type="String" Name="Salutation" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="Dob" Precision="3" />
+    <Property Type="Int32" Name="GenderValueId" />
+    <Property Type="Int32" Name="MaritalStatusValueId" />
+    <Property Type="Int32" Name="NationalityId" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Binary" Name="Photograph" MaxLength="Max" FixedLength="false" />
+    <Property Type="Int32" Name="CreatedUserId" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="UpdatedUserId" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="3" />
+    <Property Type="Binary" Name="UpdatedTimestamp" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <NavigationProperty Name="ClientContacts" Relationship="ProNetTestModel.FK_ClientContacts_Person" FromRole="Person" ToRole="ClientContact" />
+    <NavigationProperty Name="ClientContacts1" Relationship="ProNetTestModel.FK_ClientContacts_Person1" FromRole="Person" ToRole="ClientContact" />
+    <NavigationProperty Name="Object" Relationship="ProNetTestModel.FK_Person_Objects" FromRole="Person" ToRole="Object" />
+    <NavigationProperty Name="User" Relationship="ProNetTestModel.FK_Person_Users" FromRole="Person" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="ProNetTestModel.FK_Person_Users1" FromRole="Person" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_ClientContacts_Clients">
+    <End Type="ProNetTestModel.Client" Role="Client" Multiplicity="1" />
+    <End Type="ProNetTestModel.ClientContact" Role="ClientContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="ClientContact">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_EmploymentTypes">
+    <End Type="ProNetTestModel.EmploymentType" Role="EmploymentType" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.ClientContact" Role="ClientContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EmploymentType">
+        <PropertyRef Name="EmploymentTypeId" />
+      </Principal>
+      <Dependent Role="ClientContact">
+        <PropertyRef Name="EmploymentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_Person">
+    <End Type="ProNetTestModel.Person" Role="Person" Multiplicity="1" />
+    <End Type="ProNetTestModel.ClientContact" Role="ClientContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="ClientContact">
+        <PropertyRef Name="ContactPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_Person1">
+    <End Type="ProNetTestModel.Person" Role="Person" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.ClientContact" Role="ClientContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Principal>
+      <Dependent Role="ClientContact">
+        <PropertyRef Name="ReportsToPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_Users">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="1" />
+    <End Type="ProNetTestModel.ClientContact" Role="ClientContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ClientContact">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ClientContacts_Users1">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.ClientContact" Role="ClientContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="ClientContact">
+        <PropertyRef Name="UpdatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clients_ClientContacts">
+    <End Type="ProNetTestModel.ClientContact" Role="ClientContact" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.Client" Role="Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClientContact">
+        <PropertyRef Name="ClientContactId" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="InvoiceContactId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Objects">
+    <End Type="ProNetTestModel.Object" Role="Object" Multiplicity="1" />
+    <End Type="ProNetTestModel.Person" Role="Person" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Object">
+        <PropertyRef Name="ObjectID" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Users">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="1" />
+    <End Type="ProNetTestModel.Person" Role="Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="CreatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Person_Users1">
+    <End Type="ProNetTestModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.Person" Role="Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="UpdatedUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="CeeeClientAttribute">
+    <Key>
+      <PropertyRef Name="ClientAttributeID" />
+    </Key>
+    <Property Type="Int32" Name="ClientAttributeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ClientID" />
+    <Property Type="Int32" Name="UserID" />
+    <Property Type="String" Name="LandlineNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MobileNumber" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrganisationWebsite" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompanySize" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HowHeard" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Title" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JobTitle" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CeeeUser" Relationship="ProNetTestModel.FK_CeeeClientAttribute_CeeeUser" FromRole="CeeeClientAttribute" ToRole="CeeeUser" />
+    <NavigationProperty Name="Client" Relationship="ProNetTestModel.FK_CeeeClientAttribute_Client" FromRole="CeeeClientAttribute" ToRole="Client" />
+  </EntityType>
+  <EntityType Name="CeeeJobType">
+    <Key>
+      <PropertyRef Name="JobTypeID" />
+    </Key>
+    <Property Type="Int32" Name="JobTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="JobType" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CeeeJobDescriptions" Relationship="ProNetTestModel.FK_CeeeJobDescription_JobType" FromRole="CeeeJobType" ToRole="CeeeJobDescription" />
+  </EntityType>
+  <EntityType Name="CeeeUser">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Type="Int32" Name="UserID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Password" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ClientID" />
+    <Property Type="String" Name="Phone" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="JobTitle" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrgWebsite" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CompanySize" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HowHeard" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Title" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CeeeClientAttribute" Relationship="ProNetTestModel.FK_CeeeClientAttribute_CeeeUser" FromRole="CeeeUser" ToRole="CeeeClientAttribute" />
+    <NavigationProperty Name="CeeeOpportunityTypes" Relationship="ProNetTestModel.FK_CeeeOpportunityType_CeeeUser" FromRole="CeeeUser" ToRole="CeeeOpportunityType" />
+    <NavigationProperty Name="Client" Relationship="ProNetTestModel.FK_CeeeUser_Clients" FromRole="CeeeUser" ToRole="Client" />
+    <NavigationProperty Name="webpages_Roles" Relationship="ProNetTestModel.webpages_UsersInRoles" FromRole="CeeeUser" ToRole="webpages_Roles" />
+  </EntityType>
+  <EntityType Name="CeeeVolunteeringOneDayChallenge">
+    <Key>
+      <PropertyRef Name="VolunteeringJobId" />
+    </Key>
+    <Property Type="Int32" Name="VolunteeringJobId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ProjectEventTitle" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Location" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="When" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MeetingTime" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FinishingTime" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MeetingPoint" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="WhatWillBeDoing" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ExperienceNeeded" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="IsCordinatedByUniversity" />
+    <Property Type="Binary" Name="RiskAssesmentFile" MaxLength="1000" FixedLength="true" />
+    <Property Type="Binary" Name="SessionPlanFile" MaxLength="1000" FixedLength="true" />
+    <Property Type="Binary" Name="BudgetPlanFile" MaxLength="1000" FixedLength="true" />
+    <Property Type="Boolean" Name="HasInsuranceLiability" />
+    <Property Type="Boolean" Name="HasCarriedOutRiskAssesment" />
+    <Property Type="Int32" Name="VolunteeringTypeId" />
+    <Property Type="String" Name="OpportunityTypes" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AlternateEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrganisationType" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CeeeVolunteeringType" Relationship="ProNetTestModel.FK_CeeeVolunteeringOneDayChallenge_CeeeVolunteeringType" FromRole="CeeeVolunteeringOneDayChallenge" ToRole="CeeeVolunteeringType" />
+    <NavigationProperty Name="CeeeJobDescriptions" Relationship="ProNetTestModel.FK_CeeeJobDescription_CeeeJOneDayChallenge" FromRole="CeeeVolunteeringOneDayChallenge" ToRole="CeeeJobDescription" />
+  </EntityType>
+  <EntityType Name="CeeeVolunteeringPlacement">
+    <Key>
+      <PropertyRef Name="VolunteeringJobID" />
+    </Key>
+    <Property Type="Int32" Name="VolunteeringJobID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="RoleTitle" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Location" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DayTimeRequired" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DurationNeeded" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SkillsRequired" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TrainingDetails" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ApplicationMethod" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="ApplicationForm" MaxLength="1000" FixedLength="false" />
+    <Property Type="String" Name="HowToPostApplication" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Binary" Name="RoleDescriptionFile" MaxLength="1000" FixedLength="false" />
+    <Property Type="Boolean" Name="HasLiabilityInsurance" />
+    <Property Type="Boolean" Name="HasCarriedOutRiskAssesment" />
+    <Property Type="Int32" Name="NumberOfPositions" />
+    <Property Type="Int32" Name="VolunteeringTypeID" />
+    <Property Type="String" Name="OpportunityTypes" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ContactEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AlternateEmail" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="OrganisationType" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="AboutOrganisation" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CeeeVolunteeringType" Relationship="ProNetTestModel.FK_CeeeVolunteeringPlacement_CeeeVolunteeringType" FromRole="CeeeVolunteeringPlacement" ToRole="CeeeVolunteeringType" />
+    <NavigationProperty Name="CeeeJobDescriptions" Relationship="ProNetTestModel.FK_CeeeJobDescription_VolunteeringPlacement" FromRole="CeeeVolunteeringPlacement" ToRole="CeeeJobDescription" />
+  </EntityType>
+  <EntityType Name="CeeeVolunteeringType">
+    <Key>
+      <PropertyRef Name="VolunteeringTypeID" />
+    </Key>
+    <Property Type="Int32" Name="VolunteeringTypeID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Description" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CeeeVolunteeringOneDayChallenges" Relationship="ProNetTestModel.FK_CeeeVolunteeringOneDayChallenge_CeeeVolunteeringType" FromRole="CeeeVolunteeringType" ToRole="CeeeVolunteeringOneDayChallenge" />
+    <NavigationProperty Name="CeeeVolunteeringPlacements" Relationship="ProNetTestModel.FK_CeeeVolunteeringPlacement_CeeeVolunteeringType" FromRole="CeeeVolunteeringType" ToRole="CeeeVolunteeringPlacement" />
+  </EntityType>
+  <Association Name="FK_CeeeClientAttribute_CeeeUser">
+    <End Type="ProNetTestModel.CeeeUser" Role="CeeeUser" Multiplicity="1" />
+    <End Type="ProNetTestModel.CeeeClientAttribute" Role="CeeeClientAttribute" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="CeeeClientAttribute">
+        <PropertyRef Name="ClientAttributeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeClientAttribute_Client">
+    <End Type="ProNetTestModel.Client" Role="Client" Multiplicity="1" />
+    <End Type="ProNetTestModel.CeeeClientAttribute" Role="CeeeClientAttribute" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="CeeeClientAttribute">
+        <PropertyRef Name="ClientAttributeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeOpportunityType_CeeeUser">
+    <End Type="ProNetTestModel.CeeeUser" Role="CeeeUser" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.CeeeOpportunityType" Role="CeeeOpportunityType" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeUser">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="CeeeOpportunityType">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeUser_Clients">
+    <End Type="ProNetTestModel.Client" Role="Client" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.CeeeUser" Role="CeeeUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Client">
+        <PropertyRef Name="ClientID" />
+      </Principal>
+      <Dependent Role="CeeeUser">
+        <PropertyRef Name="ClientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeVolunteeringOneDayChallenge_CeeeVolunteeringType">
+    <End Type="ProNetTestModel.CeeeVolunteeringType" Role="CeeeVolunteeringType" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.CeeeVolunteeringOneDayChallenge" Role="CeeeVolunteeringOneDayChallenge" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeVolunteeringType">
+        <PropertyRef Name="VolunteeringTypeID" />
+      </Principal>
+      <Dependent Role="CeeeVolunteeringOneDayChallenge">
+        <PropertyRef Name="VolunteeringTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeVolunteeringPlacement_CeeeVolunteeringType">
+    <End Type="ProNetTestModel.CeeeVolunteeringType" Role="CeeeVolunteeringType" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.CeeeVolunteeringPlacement" Role="CeeeVolunteeringPlacement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeVolunteeringType">
+        <PropertyRef Name="VolunteeringTypeID" />
+      </Principal>
+      <Dependent Role="CeeeVolunteeringPlacement">
+        <PropertyRef Name="VolunteeringTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="webpages_UsersInRoles">
+    <End Type="ProNetTestModel.webpages_Roles" Role="webpages_Roles" Multiplicity="*" />
+    <End Type="ProNetTestModel.CeeeUser" Role="CeeeUser" Multiplicity="*" />
+  </Association>
+  <EntityType Name="CeeeJobContractType">
+    <Key>
+      <PropertyRef Name="JobContractTypeId" />
+    </Key>
+    <Property Type="Int32" Name="JobContractTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="CeeeJobDescriptions" Relationship="ProNetTestModel.FK_CeeeJobDescription_CeeeJobContractType" FromRole="CeeeJobContractType" ToRole="CeeeJobDescription" />
+    <NavigationProperty Name="CeeeJobContractType1" Relationship="ProNetTestModel.FK_JobContractType_JobDescription" FromRole="CeeeJobContractType" ToRole="CeeeJobContractType1" />
+    <NavigationProperty Name="CeeeJobContractType2" Relationship="ProNetTestModel.FK_JobContractType_JobDescription" FromRole="CeeeJobContractType1" ToRole="CeeeJobContractType" />
+  </EntityType>
+  <EntityType Name="CeeeJobDescription">
+    <Key>
+      <PropertyRef Name="JobDescriptionID" />
+    </Key>
+    <Property Type="Int32" Name="JobDescriptionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="JobTypeID" />
+    <Property Type="Int32" Name="JobCategoryID" />
+    <Property Type="DateTime" Name="ClosingDate" Precision="3" />
+    <Property Type="Decimal" Name="Salary" Precision="10" Scale="2" />
+    <Property Type="String" Name="SalaryPeriod" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HowEmployeeApproaches" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ContractTypeID" />
+    <Property Type="Int32" Name="JobID" />
+    <Property Type="Decimal" Name="NoOfHoursPerWeek" Precision="4" Scale="2" />
+    <Property Type="Boolean" Name="IsVolunteering" />
+    <Property Type="Int32" Name="VolunteeringTypeID" />
+    <Property Type="String" Name="JobDescription" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="OneDayVolunteeringID" />
+    <Property Type="Int32" Name="VolunteeringPlacmentID" />
+    <Property Type="Int32" Name="JobContractTypeID" />
+    <Property Type="DateTime" Name="EndDate" Precision="3" />
+    <NavigationProperty Name="CeeeJobContractType" Relationship="ProNetTestModel.FK_CeeeJobDescription_CeeeJobContractType" FromRole="CeeeJobDescription" ToRole="CeeeJobContractType" />
+    <NavigationProperty Name="CeeeVolunteeringOneDayChallenge" Relationship="ProNetTestModel.FK_CeeeJobDescription_CeeeJOneDayChallenge" FromRole="CeeeJobDescription" ToRole="CeeeVolunteeringOneDayChallenge" />
+    <NavigationProperty Name="Job" Relationship="ProNetTestModel.FK_CeeeJobDescription_Job" FromRole="CeeeJobDescription" ToRole="Job" />
+    <NavigationProperty Name="CeeeJobType" Relationship="ProNetTestModel.FK_CeeeJobDescription_JobType" FromRole="CeeeJobDescription" ToRole="CeeeJobType" />
+    <NavigationProperty Name="CeeeVolunteeringPlacement" Relationship="ProNetTestModel.FK_CeeeJobDescription_VolunteeringPlacement" FromRole="CeeeJobDescription" ToRole="CeeeVolunteeringPlacement" />
+  </EntityType>
+  <Association Name="FK_CeeeJobDescription_CeeeJobContractType">
+    <End Type="ProNetTestModel.CeeeJobContractType" Role="CeeeJobContractType" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.CeeeJobDescription" Role="CeeeJobDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeJobContractType">
+        <PropertyRef Name="JobContractTypeId" />
+      </Principal>
+      <Dependent Role="CeeeJobDescription">
+        <PropertyRef Name="JobContractTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobContractType_JobDescription">
+    <End Type="ProNetTestModel.CeeeJobContractType" Role="CeeeJobContractType" Multiplicity="1" />
+    <End Type="ProNetTestModel.CeeeJobContractType" Role="CeeeJobContractType1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeJobContractType">
+        <PropertyRef Name="JobContractTypeId" />
+      </Principal>
+      <Dependent Role="CeeeJobContractType1">
+        <PropertyRef Name="JobContractTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeJobDescription_CeeeJOneDayChallenge">
+    <End Type="ProNetTestModel.CeeeVolunteeringOneDayChallenge" Role="CeeeVolunteeringOneDayChallenge" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.CeeeJobDescription" Role="CeeeJobDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeVolunteeringOneDayChallenge">
+        <PropertyRef Name="VolunteeringJobId" />
+      </Principal>
+      <Dependent Role="CeeeJobDescription">
+        <PropertyRef Name="OneDayVolunteeringID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeJobDescription_Job">
+    <End Type="ProNetTestModel.Job" Role="Job" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.CeeeJobDescription" Role="CeeeJobDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="CeeeJobDescription">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeJobDescription_JobType">
+    <End Type="ProNetTestModel.CeeeJobType" Role="CeeeJobType" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.CeeeJobDescription" Role="CeeeJobDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeJobType">
+        <PropertyRef Name="JobTypeID" />
+      </Principal>
+      <Dependent Role="CeeeJobDescription">
+        <PropertyRef Name="JobTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CeeeJobDescription_VolunteeringPlacement">
+    <End Type="ProNetTestModel.CeeeVolunteeringPlacement" Role="CeeeVolunteeringPlacement" Multiplicity="0..1" />
+    <End Type="ProNetTestModel.CeeeJobDescription" Role="CeeeJobDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CeeeVolunteeringPlacement">
+        <PropertyRef Name="VolunteeringJobID" />
+      </Principal>
+      <Dependent Role="CeeeJobDescription">
+        <PropertyRef Name="VolunteeringPlacmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
